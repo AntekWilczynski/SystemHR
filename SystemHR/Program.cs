@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace SystemHR
 {
-    static class Program
+    static class Program 
     {
         /// <summary>
         /// Główny punkt wejścia dla aplikacji.
