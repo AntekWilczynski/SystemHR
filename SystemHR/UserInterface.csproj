@@ -86,5 +86,23 @@
       <Name>DataAccessLayer</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-chart-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\briefcase-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\internet-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
