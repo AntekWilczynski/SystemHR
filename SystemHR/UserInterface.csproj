@@ -104,5 +104,11 @@
   <ItemGroup>
     <None Include="Resources\money-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Places-network-server-database-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

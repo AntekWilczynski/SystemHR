@@ -73,6 +73,16 @@ namespace SystemHRUserInterface.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap admin_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("admin-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bar_chart_icon {
             get {
                 object obj = ResourceManager.GetObject("bar-chart-icon", resourceCulture);
@@ -116,6 +126,16 @@ namespace SystemHRUserInterface.Properties {
         internal static System.Drawing.Bitmap money_icon {
             get {
                 object obj = ResourceManager.GetObject("money-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Places_network_server_database_icon {
+            get {
+                object obj = ResourceManager.GetObject("Places-network-server-database-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

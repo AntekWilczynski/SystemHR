@@ -21,5 +21,18 @@ namespace SystemHRUserInterface.Forms
         {
 
         }
+
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            TabPage tpTab = new TabPage();
+            tcTabs.Controls.Add(tpTab);
+            Form frm = new Form();
+            tpTab.Text = frm.Text = "Zakładka";
+            frm.TopLevel = false;
+            frm.Visible = true;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+            tcTabs.TabPages[0].Controls.Add(frm);
+        }
     }
 }
