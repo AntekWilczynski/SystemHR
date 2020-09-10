@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SystemHRUserInterface.Forms.Contracts;
+using SystemHRUserInterface.Forms.Employees;
 
 namespace SystemHRUserInterface.Forms
 {
@@ -17,16 +19,11 @@ namespace SystemHRUserInterface.Forms
             InitializeComponent();
         }
 
-        private void btnContracts_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnEmployee_Click(object sender, EventArgs e)
         {
             TabPage tpTab = new TabPage();
             tcTabs.Controls.Add(tpTab);
-            Form frm = new Form();
+            EmployeesForm frm = new EmployeesForm();
             tpTab.Text = frm.Text = "Zakładka";
             frm.TopLevel = false;
             frm.Visible = true;
@@ -34,5 +31,19 @@ namespace SystemHRUserInterface.Forms
             frm.Dock = DockStyle.Fill;
             tcTabs.TabPages[0].Controls.Add(frm);
         }
+        private void btnContracts_Click(object sender, EventArgs e)
+        {
+            TabPage tpTab = new TabPage();
+            tcTabs.Controls.Add(tpTab);
+            ContractsForm frm = new ContractsForm();
+            tpTab.Text = frm.Text = "Zakładka";
+            frm.TopLevel = false;
+            frm.Visible = true;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+            tcTabs.TabPages[0].Controls.Add(frm);
+        }
+    
+
     }
 }
