@@ -30,23 +30,23 @@
         {
             this.tcMain = new System.Windows.Forms.TabControl();
             this.tpGeneral = new System.Windows.Forms.TabPage();
+            this.btnPositions = new System.Windows.Forms.Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
+            this.btnDepartments = new System.Windows.Forms.Button();
+            this.splitter2 = new System.Windows.Forms.Splitter();
+            this.btnSalaries = new System.Windows.Forms.Button();
+            this.splitter5 = new System.Windows.Forms.Splitter();
+            this.btnOrganizationeStructures = new System.Windows.Forms.Button();
+            this.splitter3 = new System.Windows.Forms.Splitter();
+            this.btnContracts = new System.Windows.Forms.Button();
+            this.splitter4 = new System.Windows.Forms.Splitter();
+            this.btnEmployee = new System.Windows.Forms.Button();
             this.tpConfiguration = new System.Windows.Forms.TabPage();
             this.ssMain = new System.Windows.Forms.StatusStrip();
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.pMain = new System.Windows.Forms.Panel();
-            this.splitter2 = new System.Windows.Forms.Splitter();
-            this.splitter3 = new System.Windows.Forms.Splitter();
-            this.splitter4 = new System.Windows.Forms.Splitter();
-            this.splitter5 = new System.Windows.Forms.Splitter();
             this.tsslDataBase = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUser = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnPositions = new System.Windows.Forms.Button();
-            this.btnDepartments = new System.Windows.Forms.Button();
-            this.btnSalaries = new System.Windows.Forms.Button();
-            this.btnOrganizationeStructures = new System.Windows.Forms.Button();
-            this.btnContracts = new System.Windows.Forms.Button();
-            this.btnEmployee = new System.Windows.Forms.Button();
+            this.pMain = new System.Windows.Forms.Panel();
             this.tcTabs = new System.Windows.Forms.TabControl();
             this.tcMain.SuspendLayout();
             this.tpGeneral.SuspendLayout();
@@ -86,6 +86,20 @@
             this.tpGeneral.Text = "Ogólne";
             this.tpGeneral.UseVisualStyleBackColor = true;
             // 
+            // btnPositions
+            // 
+            this.btnPositions.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnPositions.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPositions.Image = global::SystemHRUserInterface.Properties.Resources.bar_chart_icon;
+            this.btnPositions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPositions.Location = new System.Drawing.Point(738, 3);
+            this.btnPositions.Name = "btnPositions";
+            this.btnPositions.Size = new System.Drawing.Size(140, 60);
+            this.btnPositions.TabIndex = 14;
+            this.btnPositions.Text = "Stanowiska";
+            this.btnPositions.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPositions.UseVisualStyleBackColor = true;
+            // 
             // splitter1
             // 
             this.splitter1.Location = new System.Drawing.Point(735, 3);
@@ -93,6 +107,111 @@
             this.splitter1.Size = new System.Drawing.Size(3, 60);
             this.splitter1.TabIndex = 15;
             this.splitter1.TabStop = false;
+            // 
+            // btnDepartments
+            // 
+            this.btnDepartments.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnDepartments.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDepartments.Image = global::SystemHRUserInterface.Properties.Resources.briefcase_icon;
+            this.btnDepartments.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDepartments.Location = new System.Drawing.Point(595, 3);
+            this.btnDepartments.Name = "btnDepartments";
+            this.btnDepartments.Size = new System.Drawing.Size(140, 60);
+            this.btnDepartments.TabIndex = 13;
+            this.btnDepartments.Text = "Działy";
+            this.btnDepartments.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDepartments.UseVisualStyleBackColor = true;
+            // 
+            // splitter2
+            // 
+            this.splitter2.Location = new System.Drawing.Point(592, 3);
+            this.splitter2.Name = "splitter2";
+            this.splitter2.Size = new System.Drawing.Size(3, 60);
+            this.splitter2.TabIndex = 16;
+            this.splitter2.TabStop = false;
+            // 
+            // btnSalaries
+            // 
+            this.btnSalaries.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnSalaries.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalaries.Image = global::SystemHRUserInterface.Properties.Resources.money_icon;
+            this.btnSalaries.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalaries.Location = new System.Drawing.Point(442, 3);
+            this.btnSalaries.Name = "btnSalaries";
+            this.btnSalaries.Size = new System.Drawing.Size(150, 60);
+            this.btnSalaries.TabIndex = 12;
+            this.btnSalaries.Text = "Wynagrodzenie";
+            this.btnSalaries.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalaries.UseVisualStyleBackColor = true;
+            // 
+            // splitter5
+            // 
+            this.splitter5.Location = new System.Drawing.Point(439, 3);
+            this.splitter5.Name = "splitter5";
+            this.splitter5.Size = new System.Drawing.Size(3, 60);
+            this.splitter5.TabIndex = 19;
+            this.splitter5.TabStop = false;
+            // 
+            // btnOrganizationeStructures
+            // 
+            this.btnOrganizationeStructures.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnOrganizationeStructures.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrganizationeStructures.Image = global::SystemHRUserInterface.Properties.Resources.internet_icon;
+            this.btnOrganizationeStructures.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrganizationeStructures.Location = new System.Drawing.Point(289, 3);
+            this.btnOrganizationeStructures.Name = "btnOrganizationeStructures";
+            this.btnOrganizationeStructures.Size = new System.Drawing.Size(150, 60);
+            this.btnOrganizationeStructures.TabIndex = 11;
+            this.btnOrganizationeStructures.Text = "Struktury organizacyjne";
+            this.btnOrganizationeStructures.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnOrganizationeStructures.UseVisualStyleBackColor = true;
+            // 
+            // splitter3
+            // 
+            this.splitter3.Location = new System.Drawing.Point(286, 3);
+            this.splitter3.Name = "splitter3";
+            this.splitter3.Size = new System.Drawing.Size(3, 60);
+            this.splitter3.TabIndex = 17;
+            this.splitter3.TabStop = false;
+            // 
+            // btnContracts
+            // 
+            this.btnContracts.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnContracts.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContracts.Image = global::SystemHRUserInterface.Properties.Resources.edit_icon;
+            this.btnContracts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnContracts.Location = new System.Drawing.Point(146, 3);
+            this.btnContracts.Name = "btnContracts";
+            this.btnContracts.Size = new System.Drawing.Size(140, 60);
+            this.btnContracts.TabIndex = 9;
+            this.btnContracts.Text = "Umowy";
+            this.btnContracts.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnContracts.UseVisualStyleBackColor = true;
+            this.btnContracts.Click += new System.EventHandler(this.btnContracts_Click);
+            // 
+            // splitter4
+            // 
+            this.splitter4.Location = new System.Drawing.Point(143, 3);
+            this.splitter4.Name = "splitter4";
+            this.splitter4.Size = new System.Drawing.Size(3, 60);
+            this.splitter4.TabIndex = 18;
+            this.splitter4.TabStop = false;
+            // 
+            // btnEmployee
+            // 
+            this.btnEmployee.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnEmployee.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnEmployee.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployee.Image = global::SystemHRUserInterface.Properties.Resources.admin_icon;
+            this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmployee.Location = new System.Drawing.Point(3, 3);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Size = new System.Drawing.Size(140, 60);
+            this.btnEmployee.TabIndex = 10;
+            this.btnEmployee.Text = "Pracownicy";
+            this.btnEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEmployee.UseVisualStyleBackColor = true;
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // tpConfiguration
             // 
@@ -122,47 +241,6 @@
             this.tsslVersion.Size = new System.Drawing.Size(69, 17);
             this.tsslVersion.Text = "Wersja 1.0.0";
             // 
-            // pMain
-            // 
-            this.pMain.Controls.Add(this.tcTabs);
-            this.pMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pMain.Location = new System.Drawing.Point(0, 92);
-            this.pMain.Name = "pMain";
-            this.pMain.Size = new System.Drawing.Size(894, 447);
-            this.pMain.TabIndex = 2;
-            // 
-            // splitter2
-            // 
-            this.splitter2.Location = new System.Drawing.Point(592, 3);
-            this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(3, 60);
-            this.splitter2.TabIndex = 16;
-            this.splitter2.TabStop = false;
-            // 
-            // splitter3
-            // 
-            this.splitter3.Location = new System.Drawing.Point(286, 3);
-            this.splitter3.Name = "splitter3";
-            this.splitter3.Size = new System.Drawing.Size(3, 60);
-            this.splitter3.TabIndex = 17;
-            this.splitter3.TabStop = false;
-            // 
-            // splitter4
-            // 
-            this.splitter4.Location = new System.Drawing.Point(143, 3);
-            this.splitter4.Name = "splitter4";
-            this.splitter4.Size = new System.Drawing.Size(3, 60);
-            this.splitter4.TabIndex = 18;
-            this.splitter4.TabStop = false;
-            // 
-            // splitter5
-            // 
-            this.splitter5.Location = new System.Drawing.Point(439, 3);
-            this.splitter5.Name = "splitter5";
-            this.splitter5.Size = new System.Drawing.Size(3, 60);
-            this.splitter5.TabIndex = 19;
-            this.splitter5.TabStop = false;
-            // 
             // tsslDataBase
             // 
             this.tsslDataBase.Image = global::SystemHRUserInterface.Properties.Resources.Places_network_server_database_icon;
@@ -177,100 +255,28 @@
             this.tsslUser.Size = new System.Drawing.Size(84, 17);
             this.tsslUser.Text = "Użytkownik";
             // 
-            // btnPositions
+            // pMain
             // 
-            this.btnPositions.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnPositions.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPositions.Image = global::SystemHRUserInterface.Properties.Resources.bar_chart_icon;
-            this.btnPositions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPositions.Location = new System.Drawing.Point(738, 3);
-            this.btnPositions.Name = "btnPositions";
-            this.btnPositions.Size = new System.Drawing.Size(140, 60);
-            this.btnPositions.TabIndex = 14;
-            this.btnPositions.Text = "Stanowiska";
-            this.btnPositions.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPositions.UseVisualStyleBackColor = true;
-            // 
-            // btnDepartments
-            // 
-            this.btnDepartments.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnDepartments.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDepartments.Image = global::SystemHRUserInterface.Properties.Resources.briefcase_icon;
-            this.btnDepartments.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDepartments.Location = new System.Drawing.Point(595, 3);
-            this.btnDepartments.Name = "btnDepartments";
-            this.btnDepartments.Size = new System.Drawing.Size(140, 60);
-            this.btnDepartments.TabIndex = 13;
-            this.btnDepartments.Text = "Działy";
-            this.btnDepartments.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDepartments.UseVisualStyleBackColor = true;
-            // 
-            // btnSalaries
-            // 
-            this.btnSalaries.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnSalaries.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalaries.Image = global::SystemHRUserInterface.Properties.Resources.money_icon;
-            this.btnSalaries.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalaries.Location = new System.Drawing.Point(442, 3);
-            this.btnSalaries.Name = "btnSalaries";
-            this.btnSalaries.Size = new System.Drawing.Size(150, 60);
-            this.btnSalaries.TabIndex = 12;
-            this.btnSalaries.Text = "Wynagrodzenie";
-            this.btnSalaries.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalaries.UseVisualStyleBackColor = true;
-            // 
-            // btnOrganizationeStructures
-            // 
-            this.btnOrganizationeStructures.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnOrganizationeStructures.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrganizationeStructures.Image = global::SystemHRUserInterface.Properties.Resources.internet_icon;
-            this.btnOrganizationeStructures.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrganizationeStructures.Location = new System.Drawing.Point(289, 3);
-            this.btnOrganizationeStructures.Name = "btnOrganizationeStructures";
-            this.btnOrganizationeStructures.Size = new System.Drawing.Size(150, 60);
-            this.btnOrganizationeStructures.TabIndex = 11;
-            this.btnOrganizationeStructures.Text = "Struktury organizacyjne";
-            this.btnOrganizationeStructures.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOrganizationeStructures.UseVisualStyleBackColor = true;
-            // 
-            // btnContracts
-            // 
-            this.btnContracts.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnContracts.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContracts.Image = global::SystemHRUserInterface.Properties.Resources.edit_icon;
-            this.btnContracts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnContracts.Location = new System.Drawing.Point(146, 3);
-            this.btnContracts.Name = "btnContracts";
-            this.btnContracts.Size = new System.Drawing.Size(140, 60);
-            this.btnContracts.TabIndex = 9;
-            this.btnContracts.Text = "Umowy";
-            this.btnContracts.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnContracts.UseVisualStyleBackColor = true;
-            // 
-            // btnEmployee
-            // 
-            this.btnEmployee.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnEmployee.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnEmployee.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmployee.Image = global::SystemHRUserInterface.Properties.Resources.admin_icon;
-            this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployee.Location = new System.Drawing.Point(3, 3);
-            this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.Size = new System.Drawing.Size(140, 60);
-            this.btnEmployee.TabIndex = 10;
-            this.btnEmployee.Text = "Pracownicy";
-            this.btnEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEmployee.UseVisualStyleBackColor = true;
-            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
+            this.pMain.Controls.Add(this.tcTabs);
+            this.pMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pMain.Location = new System.Drawing.Point(0, 92);
+            this.pMain.Name = "pMain";
+            this.pMain.Size = new System.Drawing.Size(894, 447);
+            this.pMain.TabIndex = 2;
             // 
             // tcTabs
             // 
             this.tcTabs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tcTabs.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tcTabs.ItemSize = new System.Drawing.Size(110, 18);
             this.tcTabs.Location = new System.Drawing.Point(0, 0);
             this.tcTabs.Name = "tcTabs";
             this.tcTabs.SelectedIndex = 0;
             this.tcTabs.Size = new System.Drawing.Size(894, 447);
+            this.tcTabs.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tcTabs.TabIndex = 0;
+            this.tcTabs.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tcTabs_DrawItem);
+            this.tcTabs.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tcTabs_MouseDown);
             // 
             // MainForm
             // 
