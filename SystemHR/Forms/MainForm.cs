@@ -14,7 +14,7 @@ namespace SystemHRUserInterface.Forms
 {
     public partial class MainForm : Form
     {
-        private string addButtonFullPath = @"C:\Users\aswil\Desktop\SystemHR\SystemHR\SystemHR\Resources\add-icon.png";
+        private string closeButtonFullPath = @"C:\Users\aswil\Desktop\SystemHR\SystemHR\SystemHR\Resources\delete-icon.png";
         public MainForm()
         {
             InitializeComponent();
@@ -22,30 +22,14 @@ namespace SystemHRUserInterface.Forms
 
         private void btnEmployee_Click(object sender, EventArgs e)
         {
-            TabPage tpTab = new TabPage();
-            tcTabs.Controls.Add(tpTab);
             EmployeesForm frm = new EmployeesForm();
-            tpTab.Text = frm.Text ;
-            frm.TopLevel = false;
-            frm.Visible = true; 
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.Dock = DockStyle.Fill;
-            tcTabs.TabPages[0].Controls.Add(frm);
-            tcTabs.SelectedTab = tpTab;
+            ShowFormInTabPage(frm);
         }
         private void btnContracts_Click(object sender, EventArgs e)
         {
-            TabPage tpTab = new TabPage();
-            tcTabs.Controls.Add(tpTab);
             ContractsForm frm = new ContractsForm();
-            tpTab.Text = frm.Text ;
-            frm.TopLevel = false;
-            frm.Visible = true;
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.Dock = DockStyle.Fill;
-            tcTabs.TabPages[0].Controls.Add(frm);
-            tcTabs.SelectedTab = tpTab;
-        }
+            ShowFormInTabPage(frm);
+         }
 
         private void tcTabs_DrawItem(object sender, DrawItemEventArgs e)
         {
@@ -85,6 +69,18 @@ namespace SystemHRUserInterface.Forms
                     break;
                 }
             }
+        }
+        private void ShowFormInTabPage(Form frm)
+        {
+            TabPage tpTab = new TabPage();
+            tcTabs.Controls.Add(tpTab);
+            tpTab.Text = frm.Text;
+            frm.TopLevel = false;
+            frm.Visible = true;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+            tcTabs.TabPages[0].Controls.Add(frm);
+            tcTabs.SelectedTab = tpTab;
         }
     }
     
