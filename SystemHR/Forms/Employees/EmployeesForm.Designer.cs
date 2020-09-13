@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "EmployeesForm";
             this.Text = "Pracownicy";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EmployeesForm_FormClosed);
             this.ResumeLayout(false);
 
         }
