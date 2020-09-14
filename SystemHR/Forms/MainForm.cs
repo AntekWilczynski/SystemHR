@@ -14,7 +14,8 @@ namespace SystemHRUserInterface.Forms
 {
     public partial class MainForm : Form
     {
-        private string closeButtonFullPath = @"C:\Users\aswil\Desktop\SystemHR\SystemHR\SystemHR\Resources\delete-icon.png";
+        private string _closeButtonFullPath = @"C:\Users\aswil\Desktop\SystemHR\SystemHR\SystemHR\Resources\delete-icon.png";
+       private TabPage=_tpEmployees;
         public MainForm()
         {
             InitializeComponent();
@@ -22,8 +23,12 @@ namespace SystemHRUserInterface.Forms
 
         private void btnEmployee_Click(object sender, EventArgs e)
         {
-            if (EmployeesForm.IsNull)
+
+            if (EmployeesForm.IsNull) 
+            { 
+            _tpEmployees = new TabPage();
             ShowFormInTabPage(EmployeesForm.Instance);
+            }
         }
         private void btnContracts_Click(object sender, EventArgs e)
         {
@@ -38,7 +43,7 @@ namespace SystemHRUserInterface.Forms
                 {
                     var tabPage = this.tcTabs.TabPages[e.Index];
                     var tabRect = this.tcTabs.GetTabRect(e.Index);
-                    var closeImage = new Bitmap(closeButtonFullPath);
+                    var closeImage = new Bitmap(_closeButtonFullPath);
                         e.Graphics.DrawImage(closeImage,
                             (tabRect.Right - closeImage.Width),
                             tabRect.Top + (tabRect.Height - closeImage.Height) / 2);
@@ -57,7 +62,7 @@ namespace SystemHRUserInterface.Forms
             {
                 var tabRect = this.tcTabs.GetTabRect(i);
                 tabRect.Inflate(-2, -2);
-                var closeImage = new Bitmap(closeButtonFullPath);
+                var closeImage = new Bitmap(_closeButtonFullPath);
                 var imageRect = new Rectangle(
                     (tabRect.Right - closeImage.Width),
                     tabRect.Top + (tabRect.Height - closeImage.Height) / 2,
@@ -65,15 +70,16 @@ namespace SystemHRUserInterface.Forms
                     closeImage.Height);
                 if (imageRect.Contains(e.Location))
                 {
+                    var frm = tcTabs.TabPages[i].Controls[0] as Form;
+                    frm.Close();
                     this.tcTabs.TabPages.RemoveAt(i);
-                    EmployeesForm.Instance.Close();
                     break;
                 }
             }
         }
-        private void ShowFormInTabPage(Form frm)
+        private void ShowFormInTabPage(TabPage tpTab,   Form frm)
         {
-            TabPage tpTab = new TabPage();
+            
             tcTabs.Controls.Add(tpTab);
             tpTab.Text = frm.Text;
             frm.TopLevel = false;
