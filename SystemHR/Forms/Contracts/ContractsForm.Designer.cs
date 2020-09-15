@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "ContractsForm";
             this.Text = "Umowy";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ContractsForm_FormClosed);
             this.ResumeLayout(false);
 
         }

@@ -15,7 +15,10 @@ namespace SystemHRUserInterface.Forms
     public partial class MainForm : Form
     {
         private string _closeButtonFullPath = @"C:\Users\aswil\Desktop\SystemHR\SystemHR\SystemHR\Resources\delete-icon.png";
-       private TabPage=_tpEmployees;
+       
+        private TabPage _tpEmployees;
+        private TabPage _tpContracts;
+
         public MainForm()
         {
             InitializeComponent();
@@ -23,17 +26,28 @@ namespace SystemHRUserInterface.Forms
 
         private void btnEmployee_Click(object sender, EventArgs e)
         {
-
-            if (EmployeesForm.IsNull) 
-            { 
-            _tpEmployees = new TabPage();
-            ShowFormInTabPage(EmployeesForm.Instance);
+            
+            if (EmployeesForm.IsNull)
+            {
+                _tpEmployees = new TabPage();
+                ShowFormInTabPage(_tpEmployees, EmployeesForm.Instance);
+            }
+            else
+            {
+                tcTabs.SelectedTab = _tpEmployees;
             }
         }
         private void btnContracts_Click(object sender, EventArgs e)
         {
-            ContractsForm frm = new ContractsForm();
-            ShowFormInTabPage(frm);
+            if (ContractsForm.IsNull)
+            {
+                _tpContracts = new TabPage();
+                ShowFormInTabPage(_tpContracts, ContractsForm.Instance);
+            }
+            else
+            {
+                tcTabs.SelectedTab = _tpContracts;
+            }
          }
 
         private void tcTabs_DrawItem(object sender, DrawItemEventArgs e)
