@@ -9,24 +9,30 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SystemHRUserInterface.Forms.Contracts;
 using SystemHRUserInterface.Forms.Employees;
+using SystemHRUserInterface.Helpers;
 
 namespace SystemHRUserInterface.Forms
 {
     public partial class MainForm : Form
     {
-        private string _closeButtonFullPath = @"C:\Users\aswil\Desktop\SystemHR\SystemHR\SystemHR\Resources\delete-icon.png";
-       
+
+        #region Fields
+
         private TabPage _tpEmployees;
         private TabPage _tpContracts;
+
+        #endregion
+        #region Constructor
 
         public MainForm()
         {
             InitializeComponent();
         }
 
+        #endregion
+        #region Events
         private void btnEmployee_Click(object sender, EventArgs e)
         {
-            
             if (EmployeesForm.IsNull)
             {
                 _tpEmployees = new TabPage();
@@ -37,6 +43,7 @@ namespace SystemHRUserInterface.Forms
                 tcTabs.SelectedTab = _tpEmployees;
             }
         }
+
         private void btnContracts_Click(object sender, EventArgs e)
         {
             if (ContractsForm.IsNull)
@@ -48,7 +55,7 @@ namespace SystemHRUserInterface.Forms
             {
                 tcTabs.SelectedTab = _tpContracts;
             }
-         }
+        }
 
         private void tcTabs_DrawItem(object sender, DrawItemEventArgs e)
         {
@@ -57,13 +64,13 @@ namespace SystemHRUserInterface.Forms
                 {
                     var tabPage = this.tcTabs.TabPages[e.Index];
                     var tabRect = this.tcTabs.GetTabRect(e.Index);
-                    var closeImage = new Bitmap(_closeButtonFullPath);
-                        e.Graphics.DrawImage(closeImage,
-                            (tabRect.Right - closeImage.Width),
-                            tabRect.Top + (tabRect.Height - closeImage.Height) / 2);
-                        TextRenderer.DrawText(e.Graphics, tabPage.Text, tabPage.Font,
-                            tabRect, tabPage.ForeColor, TextFormatFlags.Left);
-                    
+                    var closeImage = new Bitmap($"{ResourcesHelper.ResourcesFilePath}\\{ResourcesHelper.close}");
+                    e.Graphics.DrawImage(closeImage,
+                        (tabRect.Right - closeImage.Width),
+                        tabRect.Top + (tabRect.Height - closeImage.Height) / 2);
+                    TextRenderer.DrawText(e.Graphics, tabPage.Text, tabPage.Font,
+                        tabRect, tabPage.ForeColor, TextFormatFlags.Left);
+
                 }
                 catch (Exception ex) { throw new Exception(ex.Message); }
             }
@@ -76,7 +83,8 @@ namespace SystemHRUserInterface.Forms
             {
                 var tabRect = this.tcTabs.GetTabRect(i);
                 tabRect.Inflate(-2, -2);
-                var closeImage = new Bitmap(_closeButtonFullPath);
+                var closeImage = new Bitmap($"{ResourcesHelper.ResourcesFilePath}\\{ResourcesHelper.close}");
+
                 var imageRect = new Rectangle(
                     (tabRect.Right - closeImage.Width),
                     tabRect.Top + (tabRect.Height - closeImage.Height) / 2,
@@ -91,9 +99,11 @@ namespace SystemHRUserInterface.Forms
                 }
             }
         }
-        private void ShowFormInTabPage(TabPage tpTab,   Form frm)
+        #endregion
+        #region Private Methods
+        private void ShowFormInTabPage(TabPage tpTab, Form frm)
         {
-            
+
             tcTabs.Controls.Add(tpTab);
             tpTab.Text = frm.Text;
             frm.TopLevel = false;
@@ -103,6 +113,9 @@ namespace SystemHRUserInterface.Forms
             tcTabs.TabPages[0].Controls.Add(frm);
             tcTabs.SelectedTab = tpTab;
         }
+
+        #endregion
+
     }
     
 }

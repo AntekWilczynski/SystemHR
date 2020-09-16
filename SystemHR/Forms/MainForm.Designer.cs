@@ -286,7 +286,9 @@
             this.Controls.Add(this.pMain);
             this.Controls.Add(this.ssMain);
             this.Controls.Add(this.tcMain);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
+            this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "System HR";
             this.tcMain.ResumeLayout(false);

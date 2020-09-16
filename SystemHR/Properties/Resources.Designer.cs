@@ -63,6 +63,16 @@ namespace SystemHRUserInterface.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_icon {
+            get {
+                object obj = ResourceManager.GetObject("add_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap admin_icon {
             get {
                 object obj = ResourceManager.GetObject("admin-icon", resourceCulture);
@@ -96,6 +106,16 @@ namespace SystemHRUserInterface.Properties {
         internal static System.Drawing.Bitmap briefcase_icon {
             get {
                 object obj = ResourceManager.GetObject("briefcase-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_icon {
+            get {
+                object obj = ResourceManager.GetObject("delete_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
