@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-
 namespace SystemHR.DataAccessLayer.ViewModels
 {
     public class EmployeeViewModel
@@ -12,16 +10,22 @@ namespace SystemHR.DataAccessLayer.ViewModels
         private string lastName;
         public string LastName 
         {
-            get; 
-            set; 
+            get { return lastName.ToUpper(); }
+            set { lastName = value; } 
         }
         private string firstName;
         public string FirstName 
-        { 
-            get;
-            set; 
+        {
+            get { return firstName.ToUpper(); }
+            set {firstName = value; }
         }
-        public string Psition { get; set; }
+        private string code;
+        public string Code
+        {
+            get { return code.PadLeft(4,'0'); }
+            set { code = value; }
+        }
+        public string Position { get; set; }
         public string Status { get; set; }
     }
 }

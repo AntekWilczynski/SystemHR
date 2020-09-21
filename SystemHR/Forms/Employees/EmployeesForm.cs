@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SystemHR.DataAccessLayer.ViewModels;
 
 namespace SystemHRUserInterface.Forms.Employees
 {
     public partial class EmployeesForm : Form
     {
-
         private static EmployeesForm _instance = null;
+        private static IList<EmployeeViewModel> fakeEmployees;
         public static EmployeesForm Instance
         {
             get
@@ -39,6 +40,12 @@ namespace SystemHRUserInterface.Forms.Employees
 private EmployeesForm()
         { 
             InitializeComponent();
+            fakeEmployees = GetFakeEmployees();
+        }
+
+        private IList<EmployeeViewModel> GetFakeEmployees()
+        {
+            throw new NotImplementedException();
         }
 
         private void EmployeesForm_FormClosed(object sender, FormClosedEventArgs e)
