@@ -43,6 +43,13 @@ private EmployeesForm()
         { 
             InitializeComponent();
             fakeEmployees = GetFakeEmployees();
+            PrepareEmployeesData();
+        }
+
+        private void PrepareEmployeesData()
+        {
+            bsEmployees.DataSource = new BindingList<EmployeeViewModel>(fakeEmployees);
+            dgvEmployees.DataSource = bsEmployees;
         }
 
         private IList<EmployeeViewModel> GetFakeEmployees()
@@ -56,16 +63,16 @@ private EmployeesForm()
                     FirstName = "Paweł",
                     Code = 1,
                     Gender = new GenderModel("mężczyzna"),
-                    DataBirth = new DateTime(1985, 06, 12),
+                    DataBirth = new DateTime(1985,1,12),
                     PESEL = "85061212345",
                     PhoneNumber = "555 666 777",
                     EmailAddress = "abc@gmail.com",
                     IdentityCardNumber = "AWR 12347",
-                    IssueDateIdentytyCard = new DateTime(2000, 12, 12),
-                    ExpirationDateIdentytyCard = new DateTime(2050, 12, 12),
+                    IssueDateIdentytyCard = new DateTime(2000,2,12),
+                    ExpirationDateIdentytyCard = new DateTime(2050,11,11),
                     PassportNumber = "RGB9875",
-                    IssueDatePassport = new DateTime(2020, 15, 3),
-                    ExpirationDatePassport = new DateTime(2021, 12, 3),
+                    IssueDatePassport = new DateTime(2020,10,3),
+                    ExpirationDatePassport = new DateTime(2021,12,13),
                     Status = new StatusModel("Wprowadzony")
                 },
 
@@ -76,16 +83,16 @@ private EmployeesForm()
                     FirstName = "Jurij",
                     Code = 2,
                     Gender = new GenderModel("mężczyzna"),
-                    DataBirth = new DateTime(1935, 06, 12),
+                    DataBirth = new DateTime(1935,6,2),
                     PESEL = "35061212345",
                     PhoneNumber = "525 636 757",
                     EmailAddress = "123abc@gmail.com",
                     IdentityCardNumber = "AWH 23547",
-                    IssueDateIdentytyCard = new DateTime(2010, 12, 12),
-                    ExpirationDateIdentytyCard = new DateTime(2050, 12, 12),
+                    IssueDateIdentytyCard = new DateTime(2010,12,12),
+                    ExpirationDateIdentytyCard = new DateTime(2050,10,11),
                     PassportNumber = "GPU346346",
-                    IssueDatePassport = new DateTime(2021, 11, 3),
-                    ExpirationDatePassport = new DateTime(2026, 14, 3),
+                    IssueDatePassport = new DateTime(2021,11,3),
+                    ExpirationDatePassport = new DateTime(2026,06,3),
                     Status = new StatusModel("Wprowadzony")
                 },
 
@@ -96,16 +103,16 @@ private EmployeesForm()
                     FirstName = "Zdzisława",
                     Code = 3,
                     Gender = new GenderModel("kobieta"),
-                    DataBirth = new DateTime(1995, 05, 15),
+                    DataBirth = new DateTime(1995,5,15),
                     PESEL = "95051516675",
                     PhoneNumber = "555 777 444",
                     EmailAddress = "def@gmail.com",
                     IdentityCardNumber = "ABW 72344",
-                    IssueDateIdentytyCard = new DateTime(2000, 12, 12),
-                    ExpirationDateIdentytyCard = new DateTime(2050, 12, 12),
+                    IssueDateIdentytyCard = new DateTime(2000,2,12),
+                    ExpirationDateIdentytyCard = new DateTime(2050,9,12),
                     PassportNumber = "KGB9875",
-                    IssueDatePassport = new DateTime(2020, 15, 3),
-                    ExpirationDatePassport = new DateTime(2021, 12, 3),
+                    IssueDatePassport = new DateTime(2020,5,13),
+                    ExpirationDatePassport = new DateTime(2021,11,3),
                     Status = new StatusModel("Wprowadzony")
                 }
             };
@@ -121,7 +128,7 @@ private EmployeesForm()
                 fakeEmployeeViewModel.Code = fakeEmployeeModel.Code.ToString(); 
                 fakeEmployeeViewModel.Position = string.Empty;
                 fakeEmployeeViewModel.Status = fakeEmployeeModel.Status.ToString();
-                fakeEmployeeViewModel.Add(fakeEmployeeViewModel);
+                fakeEmployeesVievModel.Add(fakeEmployeeViewModel);
             }
 
             return fakeEmployeesVievModel;

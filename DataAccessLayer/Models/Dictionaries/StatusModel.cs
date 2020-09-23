@@ -15,7 +15,7 @@ namespace SystemHR.DataAccessLayer.Models.Dictionaries
         }
         public override string ToString()
         {
-            return Value;
+            return Value.ToUpper();
         }
     }
 }
