@@ -38,13 +38,13 @@
             this.btnModify = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.dgvEmployees = new System.Windows.Forms.DataGridView();
-            this.bsEmployees = new System.Windows.Forms.BindingSource(this.components);
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPosition = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bsEmployees = new System.Windows.Forms.BindingSource(this.components);
             this.p.SuspendLayout();
             this.pEmployees.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
@@ -183,12 +183,9 @@
             this.dgvEmployees.Name = "dgvEmployees";
             this.dgvEmployees.ReadOnly = true;
             this.dgvEmployees.RowHeadersVisible = false;
+            this.dgvEmployees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmployees.Size = new System.Drawing.Size(794, 404);
             this.dgvEmployees.TabIndex = 1;
-            // 
-            // bsEmployees
-            // 
-            this.bsEmployees.DataSource = typeof(SystemHR.DataAccessLayer.ViewModels.EmployeeViewModel);
             // 
             // colId
             // 
@@ -238,6 +235,10 @@
             this.colStatus.Name = "colStatus";
             this.colStatus.ReadOnly = true;
             this.colStatus.ToolTipText = "Status pracownika";
+            // 
+            // bsEmployees
+            // 
+            this.bsEmployees.DataSource = typeof(SystemHR.DataAccessLayer.ViewModels.EmployeeViewModel);
             // 
             // EmployeesForm
             // 

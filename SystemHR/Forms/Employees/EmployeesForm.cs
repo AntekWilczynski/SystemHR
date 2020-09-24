@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using SystemHR.DataAccessLayer.Models;
 using SystemHR.DataAccessLayer.Models.Dictionaries;
 using SystemHR.DataAccessLayer.ViewModels;
+using SystemHRUserInterface.Helpers;
 
 namespace SystemHRUserInterface.Forms.Employees
 {
@@ -48,7 +49,8 @@ private EmployeesForm()
 
         private void PrepareEmployeesData()
         {
-            bsEmployees.DataSource = new BindingList<EmployeeViewModel>(fakeEmployees);
+            var fakeEmployeesSorted = fakeEmployees.OrderBy(x => x.Code).ToList();
+            bsEmployees.DataSource = new BindingList<EmployeeViewModel>(fakeEmployeesSorted);
             dgvEmployees.DataSource = bsEmployees;
         }
 
@@ -116,23 +118,8 @@ private EmployeesForm()
                     Status = new StatusModel("Wprowadzony")
                 }
             };
-
-            IList<EmployeeViewModel> fakeEmployeesVievModel = new List<EmployeeViewModel>();
-
-            foreach (EmployeeModel fakeEmployeeModel in fakeEmployeesModel)
-            {
-                EmployeeViewModel fakeEmployeeViewModel = new EmployeeViewModel();
-                fakeEmployeeViewModel.Id = fakeEmployeeModel.Id;
-                fakeEmployeeViewModel.LastName = fakeEmployeeModel.LastName;
-                fakeEmployeeViewModel.FirstName = fakeEmployeeModel.FirstName;
-                fakeEmployeeViewModel.Code = fakeEmployeeModel.Code.ToString(); 
-                fakeEmployeeViewModel.Position = string.Empty;
-                fakeEmployeeViewModel.Status = fakeEmployeeModel.Status.ToString();
-                fakeEmployeesVievModel.Add(fakeEmployeeViewModel);
-            }
-
-            return fakeEmployeesVievModel;
-                }
+            return MappingHelper.MapEmployeeModelToEmployeeViewMOdel(fakeEmployeesModel);
+        }
         private void EmployeesForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             _instance = null;
