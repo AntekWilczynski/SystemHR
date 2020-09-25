@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using SystemHR.DataAccessLayer.Models;
 using SystemHR.DataAccessLayer.Models.Dictionaries;
@@ -16,12 +13,16 @@ namespace SystemHRUserInterface.Forms.Employees
 {
     public partial class EmployeesForm : Form
     {
+        #region Fields
         private static EmployeesForm _instance = null;
         private static IList<EmployeeViewModel> fakeEmployees;
+        #endregion
+        #region Properties
         public static EmployeesForm Instance
         {
             get
-            { if (_instance == null)
+            {
+                if (_instance == null)
                 {
                     _instance = new EmployeesForm();
                 }
@@ -39,14 +40,16 @@ namespace SystemHRUserInterface.Forms.Employees
                 return false;
             }
         }
-
-private EmployeesForm()
-        { 
+        #endregion
+        #region Constructor
+        private EmployeesForm()
+        {
             InitializeComponent();
             fakeEmployees = GetFakeEmployees();
             PrepareEmployeesData();
         }
-
+        #endregion
+        #region Private Methods
         private void PrepareEmployeesData()
         {
             var fakeEmployeesSorted = fakeEmployees.OrderBy(x => x.Code).ToList();
@@ -120,9 +123,18 @@ private EmployeesForm()
             };
             return MappingHelper.MapEmployeeModelToEmployeeViewMOdel(fakeEmployeesModel);
         }
+        #endregion
+        #region Events
         private void EmployeesForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             _instance = null;
+        }
+        #endregion
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            EmployeeAddForm frm = new EmployeeAddForm();
+            frm.ShowDialog();
         }
     }
 }
