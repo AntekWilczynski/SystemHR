@@ -411,6 +411,7 @@
             this.btnSave.Text = "Zapisz";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -424,6 +425,7 @@
             this.btnCancel.Text = "Anuluj";
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // EmployeeAddForm
             // 
@@ -438,6 +440,7 @@
             this.Controls.Add(this.pbEmployee);
             this.Controls.Add(this.gbGeneral);
             this.Controls.Add(this.lblEmployee);
+            this.KeyPreview = true;
             this.Name = "EmployeeAddForm";
             this.Text = "Dodaj pracownika";
             this.gbGeneral.ResumeLayout(false);

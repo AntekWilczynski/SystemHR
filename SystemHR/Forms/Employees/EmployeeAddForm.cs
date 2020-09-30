@@ -11,11 +11,22 @@ using SystemHRUserInterface.Forms.Employees.Base;
 
 namespace SystemHRUserInterface.Forms.Employees
 {
-    public partial class EmployeeAddForm : BaseForm
+    public partial class EmployeeAddForm : BaseAddEditForm
     {
         public EmployeeAddForm()
         {
             InitializeComponent();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Zapisano");
+            Close();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
