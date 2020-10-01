@@ -21,16 +21,18 @@ namespace SystemHRUserInterface.Forms.Employees.Base
         {
             if (ModifierKeys==Keys.Control && e.KeyCode == Keys.Z)
             {
-              //  Save();
+                Save();
             }
 
             if (ModifierKeys==Keys.Control && e.KeyCode == Keys.A)
             {
-              //  Cancel();
+                Cancel();
             }
 
             if (e.KeyCode == Keys.Escape)
                 Close();
         }
+        protected virtual void Save() { }
+        protected virtual void Cancel() { }
     }
 }

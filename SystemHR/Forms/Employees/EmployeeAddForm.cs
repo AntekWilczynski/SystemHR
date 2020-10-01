@@ -20,13 +20,24 @@ namespace SystemHRUserInterface.Forms.Employees
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Zapisano");
-            Close();
+            Save();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            Cancel();
+        }
+        protected override void Save()
+        {
+            MessageBox.Show("Zapisano");
             Close();
         }
+        protected override void Cancel()
+        {
+            MessageBox.Show("Anulowano");
+            Close();
+        }
+
+
     }
 }
