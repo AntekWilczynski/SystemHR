@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SystemHR.DataAccessLayer.Models.Dictionaries;
+using SystemHRUserInterface.Extensions;
 using SystemHRUserInterface.Forms.Employees.Base;
 
 namespace SystemHRUserInterface.Forms.Employees
@@ -16,6 +18,19 @@ namespace SystemHRUserInterface.Forms.Employees
         public EmployeeAddForm()
         {
             InitializeComponent();
+            InitializeData();
+        }
+
+        private void InitializeData()
+        {
+            IList<GenderModel> genders = new List<GenderModel>()
+            {
+            new GenderModel("kobieta"),
+            new GenderModel("mężczyzna"),
+            new GenderModel(string.Empty)
+            };
+            bsGender.DataSource = genders;
+            cbGender.Text = string.Empty;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -38,6 +53,12 @@ namespace SystemHRUserInterface.Forms.Employees
             Close();
         }
 
+        private void dtp_ValueChanged(object sender, EventArgs e)
+        {
+            DateTimePicker dtp = sender as DateTimePicker;
+            dtp.DatePickerValueChanged();
 
+        }
     }
 }
+ 

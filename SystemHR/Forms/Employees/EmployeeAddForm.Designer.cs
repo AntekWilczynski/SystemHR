@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblEmployee = new System.Windows.Forms.Label();
             this.gbGeneral = new System.Windows.Forms.GroupBox();
             this.txtPESEL = new System.Windows.Forms.TextBox();
@@ -35,6 +36,7 @@
             this.dtpDateBirth = new System.Windows.Forms.DateTimePicker();
             this.lblBirthDay = new System.Windows.Forms.Label();
             this.cbGender = new System.Windows.Forms.ComboBox();
+            this.bsGender = new System.Windows.Forms.BindingSource(this.components);
             this.lblGender = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
@@ -63,6 +65,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.gbGeneral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsGender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmployee)).BeginInit();
             this.gbContact.SuspendLayout();
             this.gbIdentityCard.SuspendLayout();
@@ -125,6 +128,7 @@
             this.dtpDateBirth.Name = "dtpDateBirth";
             this.dtpDateBirth.Size = new System.Drawing.Size(240, 29);
             this.dtpDateBirth.TabIndex = 9;
+            this.dtpDateBirth.ValueChanged += new System.EventHandler(this.dtp_ValueChanged);
             // 
             // lblBirthDay
             // 
@@ -138,12 +142,19 @@
             // 
             // cbGender
             // 
+            this.cbGender.DataSource = this.bsGender;
+            this.cbGender.DisplayMember = "Value";
             this.cbGender.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbGender.FormattingEnabled = true;
             this.cbGender.Location = new System.Drawing.Point(140, 90);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(240, 29);
             this.cbGender.TabIndex = 7;
+            this.cbGender.ValueMember = "Id";
+            // 
+            // bsGender
+            // 
+            this.bsGender.DataSource = typeof(SystemHR.DataAccessLayer.Models.Dictionaries.GenderModel);
             // 
             // lblGender
             // 
@@ -276,6 +287,7 @@
             this.dtpExpirationIdentityCard.Name = "dtpExpirationIdentityCard";
             this.dtpExpirationIdentityCard.Size = new System.Drawing.Size(240, 29);
             this.dtpExpirationIdentityCard.TabIndex = 12;
+            this.dtpExpirationIdentityCard.ValueChanged += new System.EventHandler(this.dtp_ValueChanged);
             // 
             // dtpIssueDateIdentityCard
             // 
@@ -286,6 +298,7 @@
             this.dtpIssueDateIdentityCard.Name = "dtpIssueDateIdentityCard";
             this.dtpIssueDateIdentityCard.Size = new System.Drawing.Size(240, 29);
             this.dtpIssueDateIdentityCard.TabIndex = 13;
+            this.dtpIssueDateIdentityCard.ValueChanged += new System.EventHandler(this.dtp_ValueChanged);
             // 
             // lblExpirationIdentityCard
             // 
@@ -350,6 +363,7 @@
             this.dtpExpirationPassport.Name = "dtpExpirationPassport";
             this.dtpExpirationPassport.Size = new System.Drawing.Size(240, 29);
             this.dtpExpirationPassport.TabIndex = 12;
+            this.dtpExpirationPassport.ValueChanged += new System.EventHandler(this.dtp_ValueChanged);
             // 
             // dtpUssueDatePassport
             // 
@@ -360,6 +374,7 @@
             this.dtpUssueDatePassport.Name = "dtpUssueDatePassport";
             this.dtpUssueDatePassport.Size = new System.Drawing.Size(240, 29);
             this.dtpUssueDatePassport.TabIndex = 13;
+            this.dtpUssueDatePassport.ValueChanged += new System.EventHandler(this.dtp_ValueChanged);
             // 
             // lblExpirationPassport
             // 
@@ -445,6 +460,7 @@
             this.Text = "Dodaj pracownika";
             this.gbGeneral.ResumeLayout(false);
             this.gbGeneral.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsGender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmployee)).EndInit();
             this.gbContact.ResumeLayout(false);
             this.gbContact.PerformLayout();
@@ -493,5 +509,6 @@
         private System.Windows.Forms.Label lblUssueDatePassport;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.BindingSource bsGender;
     }
 }
