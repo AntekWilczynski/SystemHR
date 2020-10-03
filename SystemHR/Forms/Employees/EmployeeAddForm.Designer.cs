@@ -64,12 +64,18 @@
             this.lblUssueDatePassport = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.epLastName = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epFirstName = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epPESEL = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbGeneral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsGender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmployee)).BeginInit();
             this.gbContact.SuspendLayout();
             this.gbIdentityCard.SuspendLayout();
             this.gbPassport.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epLastName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epFirstName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epPESEL)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEmployee
@@ -108,6 +114,8 @@
             this.txtPESEL.Name = "txtPESEL";
             this.txtPESEL.Size = new System.Drawing.Size(240, 29);
             this.txtPESEL.TabIndex = 11;
+            this.txtPESEL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPESEL_KeyPress);
+            this.txtPESEL.Validated += new System.EventHandler(this.txtPESEL_Validated);
             // 
             // lblPesel
             // 
@@ -173,6 +181,7 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(240, 29);
             this.txtFirstName.TabIndex = 5;
+            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
             // 
             // txtLastName
             // 
@@ -181,6 +190,7 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(240, 29);
             this.txtLastName.TabIndex = 4;
+            this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
             // 
             // lblFirstName
             // 
@@ -442,6 +452,21 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // epLastName
+            // 
+            this.epLastName.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.epLastName.ContainerControl = this;
+            // 
+            // epFirstName
+            // 
+            this.epFirstName.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.epFirstName.ContainerControl = this;
+            // 
+            // epPESEL
+            // 
+            this.epPESEL.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.epPESEL.ContainerControl = this;
+            // 
             // EmployeeAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -468,6 +493,9 @@
             this.gbIdentityCard.PerformLayout();
             this.gbPassport.ResumeLayout(false);
             this.gbPassport.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epLastName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epFirstName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epPESEL)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -510,5 +538,8 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.BindingSource bsGender;
+        private System.Windows.Forms.ErrorProvider epLastName;
+        private System.Windows.Forms.ErrorProvider epFirstName;
+        private System.Windows.Forms.ErrorProvider epPESEL;
     }
 }

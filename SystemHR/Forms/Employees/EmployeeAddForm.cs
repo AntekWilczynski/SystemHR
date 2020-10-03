@@ -19,6 +19,30 @@ namespace SystemHRUserInterface.Forms.Employees
         {
             InitializeComponent();
             InitializeData();
+            ValidateControls();
+        }
+
+        private void ValidateControls()
+        {
+            if (string.IsNullOrWhiteSpace(txtLastName.Text))
+
+            {
+                epLastName.SetError(txtLastName, "Pole Nazwisko jest wymagane");
+            }
+            else
+            {
+                epLastName.Clear();
+            }
+
+            if (string.IsNullOrWhiteSpace(txtFirstName.Text))
+
+            {
+                epFirstName.SetError(txtFirstName, "Pole Imię jest wymagane");
+            }
+            else
+            {
+                epFirstName.Clear();
+            }
         }
 
         private void InitializeData()
@@ -57,7 +81,37 @@ namespace SystemHRUserInterface.Forms.Employees
         {
             DateTimePicker dtp = sender as DateTimePicker;
             dtp.DatePickerValueChanged();
+        }
 
+        private void txtLastName_TextChanged(object sender, EventArgs e)
+        {
+            ValidateControls();
+        }
+
+        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        {
+            ValidateControls();
+        }
+
+        private void txtPESEL_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPESEL_Validated(object sender, EventArgs e)
+        {
+            string PESEL = txtPESEL.Text;
+            if (!string.IsNullOrWhiteSpace(PESEL))
+            {
+                epPESEL.SetError(txtPESEL,"Cyfra kontrolna nr PESEL jest nieprawwidłowa");
+            }
+            else
+            {
+                epPESEL.Clear();
+            }
         }
     }
 }
