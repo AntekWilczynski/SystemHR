@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using SystemHR.DataAccessLayer.Models.Dictionaries;
 using SystemHRUserInterface.Extensions;
 using SystemHRUserInterface.Forms.Employees.Base;
+using SystemHRUserInterface.Helpers;
 
 namespace SystemHRUserInterface.Forms.Employees
 {
@@ -59,7 +60,37 @@ namespace SystemHRUserInterface.Forms.Employees
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Save();
+            if (ValidateForm())
+            {
+
+            }
+            Close();
+        }
+
+        private bool ValidateForm()
+        {
+            StringBuilder sbErrorMessage = new StringBuilder();
+            string lastNameErrorMessage = epLastName.GetError(txtLastName);
+            if (!string.IsNullOrEmpty(lastNameErrorMessage))
+            {
+                sbErrorMessage.Append(lastNameErrorMessage);
+            }
+
+            string firstNameErrorMessage = epFirstName.GetError(txtFirstName);
+            if (!string.IsNullOrEmpty(firstNameErrorMessage))
+            {
+                sbErrorMessage.Append(firstNameErrorMessage);
+            }
+            if (sbErrorMessage.Length>0)
+            {
+                MessageBox.Show(
+                    sbErrorMessage.ToString(),
+                    "Dodawanie pracownika",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -104,7 +135,7 @@ namespace SystemHRUserInterface.Forms.Employees
         private void txtPESEL_Validated(object sender, EventArgs e)
         {
             string PESEL = txtPESEL.Text;
-            if (!string.IsNullOrWhiteSpace(PESEL))
+            if (!string.IsNullOrWhiteSpace(PESEL) && !ValidatorHelper.IsValidPESEL(PESEL))
             {
                 epPESEL.SetError(txtPESEL,"Cyfra kontrolna nr PESEL jest nieprawwidłowa");
             }
