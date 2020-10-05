@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SystemHR.DataAccessLayer.Models;
 using SystemHR.DataAccessLayer.Models.Dictionaries;
 using SystemHRUserInterface.Extensions;
 using SystemHRUserInterface.Forms.Employees.Base;
@@ -28,7 +29,7 @@ namespace SystemHRUserInterface.Forms.Employees
             if (string.IsNullOrWhiteSpace(txtLastName.Text))
 
             {
-                epLastName.SetError(txtLastName, "Pole Nazwisko jest wymagane");
+                epLastName.SetError(txtLastName, "Pole Nazwisko jest wymagane. ");
             }
             else
             {
@@ -38,7 +39,7 @@ namespace SystemHRUserInterface.Forms.Employees
             if (string.IsNullOrWhiteSpace(txtFirstName.Text))
 
             {
-                epFirstName.SetError(txtFirstName, "Pole Imię jest wymagane");
+                epFirstName.SetError(txtFirstName, "Pole Imię jest wymagane. ");
             }
             else
             {
@@ -66,6 +67,43 @@ namespace SystemHRUserInterface.Forms.Employees
             }
             Close();
         }
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Cancel();
+        }
+        protected override void Cancel()
+        {
+            MessageBox.Show("Anulowano");
+            Close();
+        }
+        protected override void Save()
+        {
+            if (ValidateForm())
+            {
+                EmployeeModel employee = new EmployeeModel()
+                {
+                    LastName = txtLastName.Text,
+                    FirstName = txtFirstName.Text,
+                    Gender = new GenderModel(cbGender.Text),
+                    DataBirth = dtpDateBirth.Value,
+                    PESEL = txtPESEL.Text,
+                    PhoneNumber = txtPhoneNumber.Text,
+                    EmailAddress = txtEmailAddress.Text,
+                    IdentityCardNumber = txtIdentityCard.Text,
+                    IssueDateIdentytyCard = dtpIssueDateIdentityCard.Value,
+                    ExpirationDateIdentytyCard = dtpExpirationIdentityCard.Value,
+                    PassportNumber = txtPassport.Text,
+                    IssueDatePassport = dtpExpirationPassport.Value,
+                    ExpirationDatePassport = dtpExpirationPassport.Value,
+                    Status = new StatusModel("Wprowadzony")
+                };
+                // employee = CreateEmployee(employee);
+                employee.Id = 4;
+                employee.Code = 4;
+                Close();
+            }
+        }
+
 
         private bool ValidateForm()
         {
@@ -85,28 +123,29 @@ namespace SystemHRUserInterface.Forms.Employees
             {
                 MessageBox.Show(
                     sbErrorMessage.ToString(),
-                    "Dodawanie pracownika",
+                    "Dodawanie pracownika...",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
                 return false;
             }
+            string peselWarningMessage = epPESEL.GetError(txtPESEL);
+            if (!string.IsNullOrEmpty(peselWarningMessage))
+            {
+                DialogResult answer =
+                    MessageBox.Show(
+                        peselWarningMessage + Environment.NewLine + "Czy mimo to chcesz dodać pracownika? ",
+                        "Dodawanie pracownika...",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning);
+                if (answer== DialogResult.No)
+                {
+                    return false;
+                }
+            }
             return true;
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            Cancel();
-        }
-        protected override void Save()
-        {
-            MessageBox.Show("Zapisano");
-            Close();
-        }
-        protected override void Cancel()
-        {
-            MessageBox.Show("Anulowano");
-            Close();
-        }
+
 
         private void dtp_ValueChanged(object sender, EventArgs e)
         {

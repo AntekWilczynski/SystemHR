@@ -44,7 +44,7 @@
             this.lblLastName = new System.Windows.Forms.Label();
             this.pbEmployee = new System.Windows.Forms.PictureBox();
             this.gbContact = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtEmailAddress = new System.Windows.Forms.TextBox();
             this.lbEmailAddress = new System.Windows.Forms.Label();
@@ -224,7 +224,7 @@
             // 
             // gbContact
             // 
-            this.gbContact.Controls.Add(this.textBox1);
+            this.gbContact.Controls.Add(this.txtPhoneNumber);
             this.gbContact.Controls.Add(this.label1);
             this.gbContact.Controls.Add(this.txtEmailAddress);
             this.gbContact.Controls.Add(this.lbEmailAddress);
@@ -236,13 +236,13 @@
             this.gbContact.TabStop = false;
             this.gbContact.Text = "Kontakt";
             // 
-            // textBox1
+            // txtPhoneNumber
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(140, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 29);
-            this.textBox1.TabIndex = 5;
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNumber.Location = new System.Drawing.Point(140, 20);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(240, 29);
+            this.txtPhoneNumber.TabIndex = 5;
             // 
             // label1
             // 
@@ -517,7 +517,7 @@
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.PictureBox pbEmployee;
         private System.Windows.Forms.GroupBox gbContact;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtEmailAddress;
         private System.Windows.Forms.Label lbEmailAddress;
