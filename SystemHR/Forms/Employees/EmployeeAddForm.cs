@@ -12,11 +12,15 @@ using SystemHR.DataAccessLayer.Models.Dictionaries;
 using SystemHRUserInterface.Extensions;
 using SystemHRUserInterface.Forms.Employees.Base;
 using SystemHRUserInterface.Helpers;
+using SystemHRUserInterface.Helpers.Classes;
 
 namespace SystemHRUserInterface.Forms.Employees
 {
+    
+
     public partial class EmployeeAddForm : BaseAddEditForm
     {
+        public EventHandler ReloadEmployees;
         public EmployeeAddForm()
         {
             InitializeComponent();
@@ -100,6 +104,9 @@ namespace SystemHRUserInterface.Forms.Employees
                 // employee = CreateEmployee(employee);
                 employee.Id = 4;
                 employee.Code = 4;
+
+                ReloadEmployees?.Invoke(btnSave, new EmployeeEventArgs(employee));
+
                 Close();
             }
         }

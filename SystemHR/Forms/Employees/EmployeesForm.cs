@@ -134,7 +134,12 @@ namespace SystemHRUserInterface.Forms.Employees
         private void btnCreate_Click(object sender, EventArgs e)
         {
             EmployeeAddForm frm = new EmployeeAddForm();
+            frm.ReloadEmployees += (s, ea) =>
+            {
+                MessageBox.Show("ReloadEmployees Invoke");
+            };
             frm.ShowDialog();
+
         }
     }
 }
