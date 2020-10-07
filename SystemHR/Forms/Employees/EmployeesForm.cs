@@ -8,6 +8,7 @@ using SystemHR.DataAccessLayer.Models;
 using SystemHR.DataAccessLayer.Models.Dictionaries;
 using SystemHR.DataAccessLayer.ViewModels;
 using SystemHRUserInterface.Helpers;
+using SystemHRUserInterface.Helpers.Classes;
 
 namespace SystemHRUserInterface.Forms.Employees
 {
@@ -121,7 +122,7 @@ namespace SystemHRUserInterface.Forms.Employees
                     Status = new StatusModel("Wprowadzony")
                 }
             };
-            return MappingHelper.MapEmployeeModelToEmployeeViewMOdel(fakeEmployeesModel);
+            return MappingHelper.MapEmployeeModelToEmployeeViewModel(fakeEmployeesModel);
         }
         #endregion
         #region Events
@@ -134,12 +135,19 @@ namespace SystemHRUserInterface.Forms.Employees
         private void btnCreate_Click(object sender, EventArgs e)
         {
             EmployeeAddForm frm = new EmployeeAddForm();
-            frm.ReloadEmployees += (s, ea) =>
-            {
-                MessageBox.Show("ReloadEmployees Invoke");
-            };
+       
             frm.ShowDialog();
+            frm.ReloadEmployees += (s, ea) =>
 
+            {
+                EmployeeEventArgs eventArgs = ea as EmployeeEventArgs;
+                if (eventArgs != null)
+                {
+                    EmployeeViewModel employee
+                    = MappingHelper.MapEmployeeModelToEmployeeViewModel(eventArgs.Employee);
+                    bsEmployees.Add(employee);
+                }
+            };
         }
     }
 }

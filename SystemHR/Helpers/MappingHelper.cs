@@ -10,10 +10,9 @@ namespace SystemHRUserInterface.Helpers
 {
     public class MappingHelper
     {
-        public static IList<EmployeeViewModel> MapEmployeeModelToEmployeeViewMOdel(IList<EmployeeModel> employeesModel)
+        public static IList<EmployeeViewModel> MapEmployeeModelToEmployeeViewModel(IList<EmployeeModel> employeesModel)
         {
-            IList<EmployeeViewModel> employeesVievModel = new List<EmployeeViewModel>();
-
+            IList<EmployeeViewModel> employeesViewModel = new List<EmployeeViewModel>();
             foreach (EmployeeModel employeeModel in employeesModel)
             {
                 EmployeeViewModel employeeViewModel = new EmployeeViewModel();
@@ -23,12 +22,20 @@ namespace SystemHRUserInterface.Helpers
                 employeeViewModel.Code = employeeModel.Code.ToString();
                 employeeViewModel.Position = string.Empty;
                 employeeViewModel.Status = employeeModel.Status.ToString();
-                employeesVievModel.Add(employeeViewModel);
+                employeesViewModel.Add(employeeViewModel);
             }
-
-            return employeesVievModel;
-
+            return employeesViewModel;
         }
-
+        public static EmployeeViewModel MapEmployeeModelToEmployeeViewModel(EmployeeModel employeeModel)
+        {
+            EmployeeViewModel employeeViewModel = new EmployeeViewModel();
+                employeeViewModel.Id = employeeModel.Id;
+                employeeViewModel.LastName = employeeModel.LastName;
+                employeeViewModel.FirstName = employeeModel.FirstName;
+                employeeViewModel.Code = employeeModel.Code.ToString();
+                employeeViewModel.Position = string.Empty;
+                employeeViewModel.Status = employeeModel.Status.ToString();
+            return employeeViewModel;
+        }
     }
 }

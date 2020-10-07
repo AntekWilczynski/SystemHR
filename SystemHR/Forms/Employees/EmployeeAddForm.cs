@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using SystemHR.DataAccessLayer.Models;
 using SystemHR.DataAccessLayer.Models.Dictionaries;
@@ -101,12 +96,9 @@ namespace SystemHRUserInterface.Forms.Employees
                     ExpirationDatePassport = dtpExpirationPassport.Value,
                     Status = new StatusModel("Wprowadzony")
                 };
-                // employee = CreateEmployee(employee);
                 employee.Id = 4;
                 employee.Code = 4;
-
                 ReloadEmployees?.Invoke(btnSave, new EmployeeEventArgs(employee));
-
                 Close();
             }
         }

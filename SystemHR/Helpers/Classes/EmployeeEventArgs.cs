@@ -10,11 +10,11 @@ namespace SystemHRUserInterface.Helpers.Classes
      public class EmployeeEventArgs: EventArgs
 
     {
-        public EmployeeModel employee { private set; get; }
+        public EmployeeModel Employee { private set; get; }
         public EmployeeEventArgs(EmployeeModel employee)
 
         {
-            this.employee = employee;
+            Employee = employee;
         }
     }
 }
