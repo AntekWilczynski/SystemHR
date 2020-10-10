@@ -1,4 +1,4 @@
-﻿namespace SystemHRUserInterface.Forms.Employees
+﻿namespace SystemHR.UserInterface.Forms.Employees
 {
     partial class EmployeesForm
     {
@@ -84,7 +84,7 @@
             // 
             this.btnSendEmail.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSendEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSendEmail.Image = global::SystemHRUserInterface.Properties.Resources.internet_icon;
+            this.btnSendEmail.Image = global::SystemHR.UserInterface.Properties.Resources.internet_icon;
             this.btnSendEmail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSendEmail.Location = new System.Drawing.Point(617, 0);
             this.btnSendEmail.Name = "btnSendEmail";
@@ -98,7 +98,7 @@
             // 
             this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Image = global::SystemHRUserInterface.Properties.Resources.Places_network_server_database_icon;
+            this.btnRefresh.Image = global::SystemHR.UserInterface.Properties.Resources.Places_network_server_database_icon;
             this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRefresh.Location = new System.Drawing.Point(395, 0);
             this.btnRefresh.Name = "btnRefresh";
@@ -112,7 +112,7 @@
             // 
             this.btnRemove.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Image = global::SystemHRUserInterface.Properties.Resources.delete_icon;
+            this.btnRemove.Image = global::SystemHR.UserInterface.Properties.Resources.delete_icon;
             this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemove.Location = new System.Drawing.Point(305, 0);
             this.btnRemove.Name = "btnRemove";
@@ -126,7 +126,7 @@
             // 
             this.btnDismiss.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnDismiss.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDismiss.Image = global::SystemHRUserInterface.Properties.Resources.delete_icon;
+            this.btnDismiss.Image = global::SystemHR.UserInterface.Properties.Resources.delete_icon;
             this.btnDismiss.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDismiss.Location = new System.Drawing.Point(215, 0);
             this.btnDismiss.Name = "btnDismiss";
@@ -140,7 +140,7 @@
             // 
             this.btnModify.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModify.Image = global::SystemHRUserInterface.Properties.Resources.edit_icon;
+            this.btnModify.Image = global::SystemHR.UserInterface.Properties.Resources.edit_icon;
             this.btnModify.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModify.Location = new System.Drawing.Point(90, 0);
             this.btnModify.Name = "btnModify";
@@ -154,7 +154,7 @@
             // 
             this.btnCreate.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreate.Image = global::SystemHRUserInterface.Properties.Resources.add_icon;
+            this.btnCreate.Image = global::SystemHR.UserInterface.Properties.Resources.add_icon;
             this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCreate.Location = new System.Drawing.Point(0, 0);
             this.btnCreate.Name = "btnCreate";

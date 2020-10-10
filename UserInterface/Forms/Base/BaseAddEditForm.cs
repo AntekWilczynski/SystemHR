@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SystemHRUserInterface.Forms.Employees.Base
+namespace SystemHR.UserInterface.Forms.Base
 {
     public partial class BaseAddEditForm : BaseForm
     {

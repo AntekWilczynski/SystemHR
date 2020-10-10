@@ -1,4 +1,4 @@
-﻿namespace SystemHRUserInterface.Forms.Employees
+﻿namespace SystemHR.UserInterface.Forms.Employees
 {
     partial class EmployeeAddForm
     {
@@ -214,7 +214,7 @@
             // 
             // pbEmployee
             // 
-            this.pbEmployee.Image = global::SystemHRUserInterface.Properties.Resources.admin_icon;
+            this.pbEmployee.Image = global::SystemHR.UserInterface.Properties.Resources.admin_icon;
             this.pbEmployee.Location = new System.Drawing.Point(812, 10);
             this.pbEmployee.Name = "pbEmployee";
             this.pbEmployee.Size = new System.Drawing.Size(60, 64);
@@ -427,7 +427,7 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Image = global::SystemHRUserInterface.Properties.Resources.edit_icon;
+            this.btnSave.Image = global::SystemHR.UserInterface.Properties.Resources.edit_icon;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.Location = new System.Drawing.Point(589, 428);
             this.btnSave.Name = "btnSave";
@@ -441,7 +441,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Image = global::SystemHRUserInterface.Properties.Resources.delete_icon;
+            this.btnCancel.Image = global::SystemHR.UserInterface.Properties.Resources.delete_icon;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancel.Location = new System.Drawing.Point(712, 428);
             this.btnCancel.Name = "btnCancel";

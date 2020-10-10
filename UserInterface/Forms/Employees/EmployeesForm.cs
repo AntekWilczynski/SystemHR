@@ -7,10 +7,10 @@ using System.Windows.Forms;
 using SystemHR.DataAccessLayer.Models;
 using SystemHR.DataAccessLayer.Models.Dictionaries;
 using SystemHR.DataAccessLayer.ViewModels;
-using SystemHRUserInterface.Helpers;
-using SystemHRUserInterface.Helpers.Classes;
+using SystemHR.UserInterface.Helpers;
+using SystemHR.UserInterface.Classes;
 
-namespace SystemHRUserInterface.Forms.Employees
+namespace SystemHR.UserInterface.Forms.Employees
 {
     public partial class EmployeesForm : Form
     {
@@ -129,10 +129,7 @@ namespace SystemHRUserInterface.Forms.Employees
         private void btnCreate_Click(object sender, EventArgs e)
         {
             EmployeeAddForm frm = new EmployeeAddForm();
-
-            frm.ShowDialog();
             frm.ReloadEmployees += (s, ea) =>
-
             {
                 EmployeeEventArgs eventArgs = ea as EmployeeEventArgs;
                 if (eventArgs != null)
@@ -140,8 +137,11 @@ namespace SystemHRUserInterface.Forms.Employees
                     EmployeeViewModel employee
                     = MappingHelper.MapEmployeeModelToEmployeeViewModel(eventArgs.Employee);
                     bsEmployees.Add(employee);
+                    dgvEmployees.ClearSelection();
+                    dgvEmployees.Rows[dgvEmployees.Rows.Count - 1].Selected = true;
                 }
             };
+            frm.ShowDialog();
         }
         private void EmployeesForm_FormClosed(object sender, FormClosedEventArgs e)
         {

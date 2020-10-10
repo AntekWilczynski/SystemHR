@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SystemHR.DataAccessLayer.Models;
 
-namespace SystemHRUserInterface.Helpers.Classes
+namespace SystemHR.UserInterface.Classes
 {
      public class EmployeeEventArgs: EventArgs
 
@@ -14,7 +10,7 @@ namespace SystemHRUserInterface.Helpers.Classes
         public EmployeeEventArgs(EmployeeModel employee)
 
         {
-            Employee = employee;
+           Employee = employee;
         }
     }
 }

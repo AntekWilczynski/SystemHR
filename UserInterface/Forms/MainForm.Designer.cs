@@ -1,4 +1,4 @@
-﻿namespace SystemHRUserInterface.Forms
+﻿namespace SystemHR.UserInterface.Forms
 {
     partial class MainForm
     {
@@ -90,7 +90,7 @@
             // 
             this.btnPositions.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnPositions.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPositions.Image = global::SystemHRUserInterface.Properties.Resources.bar_chart_icon;
+            this.btnPositions.Image = global::SystemHR.UserInterface.Properties.Resources.bar_chart_icon;
             this.btnPositions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPositions.Location = new System.Drawing.Point(738, 3);
             this.btnPositions.Name = "btnPositions";
@@ -112,7 +112,7 @@
             // 
             this.btnDepartments.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnDepartments.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDepartments.Image = global::SystemHRUserInterface.Properties.Resources.briefcase_icon;
+            this.btnDepartments.Image = global::SystemHR.UserInterface.Properties.Resources.briefcase_icon;
             this.btnDepartments.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDepartments.Location = new System.Drawing.Point(595, 3);
             this.btnDepartments.Name = "btnDepartments";
@@ -134,7 +134,7 @@
             // 
             this.btnSalaries.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnSalaries.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalaries.Image = global::SystemHRUserInterface.Properties.Resources.money_icon;
+            this.btnSalaries.Image = global::SystemHR.UserInterface.Properties.Resources.money_icon;
             this.btnSalaries.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalaries.Location = new System.Drawing.Point(442, 3);
             this.btnSalaries.Name = "btnSalaries";
@@ -156,7 +156,7 @@
             // 
             this.btnOrganizationeStructures.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnOrganizationeStructures.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrganizationeStructures.Image = global::SystemHRUserInterface.Properties.Resources.internet_icon;
+            this.btnOrganizationeStructures.Image = global::SystemHR.UserInterface.Properties.Resources.internet_icon;
             this.btnOrganizationeStructures.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOrganizationeStructures.Location = new System.Drawing.Point(289, 3);
             this.btnOrganizationeStructures.Name = "btnOrganizationeStructures";
@@ -176,9 +176,10 @@
             // 
             // btnContracts
             // 
+            this.btnContracts.BackColor = System.Drawing.Color.White;
             this.btnContracts.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnContracts.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContracts.Image = global::SystemHRUserInterface.Properties.Resources.edit_icon;
+            this.btnContracts.Image = global::SystemHR.UserInterface.Properties.Resources.edit_icon;
             this.btnContracts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnContracts.Location = new System.Drawing.Point(146, 3);
             this.btnContracts.Name = "btnContracts";
@@ -186,7 +187,7 @@
             this.btnContracts.TabIndex = 9;
             this.btnContracts.Text = "Umowy";
             this.btnContracts.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnContracts.UseVisualStyleBackColor = true;
+            this.btnContracts.UseVisualStyleBackColor = false;
             this.btnContracts.Click += new System.EventHandler(this.btnContracts_Click);
             // 
             // splitter4
@@ -202,7 +203,7 @@
             this.btnEmployee.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnEmployee.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnEmployee.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmployee.Image = global::SystemHRUserInterface.Properties.Resources.admin_icon;
+            this.btnEmployee.Image = global::SystemHR.UserInterface.Properties.Resources.admin_icon;
             this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEmployee.Location = new System.Drawing.Point(3, 3);
             this.btnEmployee.Name = "btnEmployee";
@@ -243,14 +244,14 @@
             // 
             // tsslDataBase
             // 
-            this.tsslDataBase.Image = global::SystemHRUserInterface.Properties.Resources.Places_network_server_database_icon;
+            this.tsslDataBase.Image = global::SystemHR.UserInterface.Properties.Resources.Places_network_server_database_icon;
             this.tsslDataBase.Name = "tsslDataBase";
             this.tsslDataBase.Size = new System.Drawing.Size(138, 17);
             this.tsslDataBase.Text = "Baza HumanResource";
             // 
             // tsslUser
             // 
-            this.tsslUser.Image = global::SystemHRUserInterface.Properties.Resources.admin_icon1;
+            this.tsslUser.Image = global::SystemHR.UserInterface.Properties.Resources.admin_icon1;
             this.tsslUser.Name = "tsslUser";
             this.tsslUser.Size = new System.Drawing.Size(84, 17);
             this.tsslUser.Text = "Użytkownik";
@@ -275,8 +276,8 @@
             this.tcTabs.Size = new System.Drawing.Size(894, 447);
             this.tcTabs.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tcTabs.TabIndex = 0;
-            this.tcTabs.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tcTabs_DrawItem);
-            this.tcTabs.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tcTabs_MouseDown);
+            this.tcTabs.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.TcTabs_DrawItem);
+            this.tcTabs.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TcTabs_MouseDown);
             // 
             // MainForm
             // 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SystemHRUserInterface.Helpers
+namespace SystemHR.UserInterface.Helpers
 {
     public static class ValidatorHelper
     {

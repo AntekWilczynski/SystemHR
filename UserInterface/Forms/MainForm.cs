@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SystemHRUserInterface.Forms.Contracts;
-using SystemHRUserInterface.Forms.Employees;
-using SystemHRUserInterface.Helpers;
+using SystemHR.UserInterface.Forms.Contracts;
+using SystemHR.UserInterface.Forms.Employees;
+using SystemHR.UserInterface.Helpers;
 
-namespace SystemHRUserInterface.Forms
+namespace SystemHR.UserInterface.Forms
 {
     public partial class MainForm : Form
     {
@@ -57,8 +57,8 @@ namespace SystemHRUserInterface.Forms
             }
         }
 
-        private void tcTabs_DrawItem(object sender, DrawItemEventArgs e)
-        {
+        private void TcTabs_DrawItem(object sender, DrawItemEventArgs e)
+        
             {
                 try
                 {
@@ -74,9 +74,9 @@ namespace SystemHRUserInterface.Forms
                 }
                 catch (Exception ex) { throw new Exception(ex.Message); }
             }
-        }
+        
 
-        private void tcTabs_MouseDown(object sender, MouseEventArgs e)
+        private void TcTabs_MouseDown(object sender, MouseEventArgs e)
         {
             // Process MouseDown event only till (tabControl.TabPages.Count - 1) excluding the last TabPage
             for (var i = 0; i < this.tcTabs.TabPages.Count; i++)

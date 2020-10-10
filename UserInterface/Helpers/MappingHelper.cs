@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using SystemHR.DataAccessLayer.Models;
 using SystemHR.DataAccessLayer.ViewModels;
 
-namespace SystemHRUserInterface.Helpers
+namespace SystemHR.UserInterface.Helpers
 {
     public class MappingHelper
     {

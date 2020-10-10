@@ -1,4 +1,4 @@
-﻿namespace SystemHRUserInterface.Forms.Contracts
+﻿namespace SystemHR.UserInterface.Forms.Contracts
 {
     partial class ContractsForm
     {

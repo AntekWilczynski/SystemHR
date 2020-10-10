@@ -1,4 +1,4 @@
-﻿namespace SystemHRUserInterface.Forms.Employees.Base
+﻿namespace SystemHR.UserInterface.Forms.Base
 {
     partial class BaseAddEditForm
     {

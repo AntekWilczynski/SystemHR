@@ -1,24 +1,23 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 using SystemHR.DataAccessLayer.Models;
 using SystemHR.DataAccessLayer.Models.Dictionaries;
-using SystemHRUserInterface.Extensions;
-using SystemHRUserInterface.Forms.Employees.Base;
-using SystemHRUserInterface.Helpers;
-using SystemHRUserInterface.Helpers.Classes;
+using SystemHR.UserInterface.Extensions;
+using SystemHR.UserInterface.Forms.Base;
+using SystemHR.UserInterface.Helpers;
+using SystemHR.UserInterface.Classes;
 
 
 
 
-namespace SystemHRUserInterface.Forms.Employees
+namespace SystemHR.UserInterface.Forms.Employees
 {
     
 
     public partial class EmployeeAddForm : BaseAddEditForm
-    {
-
+    { 
         #region Fields
         public EventHandler ReloadEmployees;
         #endregion
