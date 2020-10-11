@@ -108,12 +108,9 @@ namespace SystemHR.UserInterface.Forms.Employees
         #region Events
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (ValidateForm())
-            {
-
-            }
-            Close();
+            Save();
         }
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Cancel();

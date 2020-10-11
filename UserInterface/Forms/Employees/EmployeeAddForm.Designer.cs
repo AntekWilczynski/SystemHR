@@ -120,7 +120,7 @@
             // lblPesel
             // 
             this.lblPesel.AutoSize = true;
-            this.lblPesel.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPesel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPesel.Location = new System.Drawing.Point(5, 160);
             this.lblPesel.Name = "lblPesel";
             this.lblPesel.Size = new System.Drawing.Size(52, 21);
@@ -141,7 +141,7 @@
             // lblBirthDay
             // 
             this.lblBirthDay.AutoSize = true;
-            this.lblBirthDay.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBirthDay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBirthDay.Location = new System.Drawing.Point(5, 125);
             this.lblBirthDay.Name = "lblBirthDay";
             this.lblBirthDay.Size = new System.Drawing.Size(115, 21);
@@ -167,10 +167,10 @@
             // lblGender
             // 
             this.lblGender.AutoSize = true;
-            this.lblGender.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGender.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGender.Location = new System.Drawing.Point(5, 90);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(39, 21);
+            this.lblGender.Size = new System.Drawing.Size(38, 21);
             this.lblGender.TabIndex = 6;
             this.lblGender.Text = "Płeć";
             // 
@@ -195,20 +195,20 @@
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstName.Location = new System.Drawing.Point(5, 55);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(45, 21);
+            this.lblFirstName.Size = new System.Drawing.Size(44, 21);
             this.lblFirstName.TabIndex = 3;
             this.lblFirstName.Text = "Imię";
             // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastName.Location = new System.Drawing.Point(5, 20);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(85, 21);
+            this.lblLastName.Size = new System.Drawing.Size(84, 21);
             this.lblLastName.TabIndex = 2;
             this.lblLastName.Text = "Nazwisko";
             // 
@@ -247,7 +247,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(5, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 21);
@@ -265,7 +265,7 @@
             // lbEmailAddress
             // 
             this.lbEmailAddress.AutoSize = true;
-            this.lbEmailAddress.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmailAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEmailAddress.Location = new System.Drawing.Point(5, 55);
             this.lbEmailAddress.Name = "lbEmailAddress";
             this.lbEmailAddress.Size = new System.Drawing.Size(92, 21);
@@ -313,10 +313,10 @@
             // lblExpirationIdentityCard
             // 
             this.lblExpirationIdentityCard.AutoSize = true;
-            this.lblExpirationIdentityCard.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpirationIdentityCard.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExpirationIdentityCard.Location = new System.Drawing.Point(5, 90);
             this.lblExpirationIdentityCard.Name = "lblExpirationIdentityCard";
-            this.lblExpirationIdentityCard.Size = new System.Drawing.Size(111, 21);
+            this.lblExpirationIdentityCard.Size = new System.Drawing.Size(109, 21);
             this.lblExpirationIdentityCard.TabIndex = 6;
             this.lblExpirationIdentityCard.Text = "Data ważności";
             // 
@@ -331,7 +331,7 @@
             // lblIdentityCard
             // 
             this.lblIdentityCard.AutoSize = true;
-            this.lblIdentityCard.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdentityCard.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdentityCard.Location = new System.Drawing.Point(5, 20);
             this.lblIdentityCard.Name = "lblIdentityCard";
             this.lblIdentityCard.Size = new System.Drawing.Size(92, 21);
@@ -341,7 +341,7 @@
             // lblUssueDateIdentityCard
             // 
             this.lblUssueDateIdentityCard.AutoSize = true;
-            this.lblUssueDateIdentityCard.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUssueDateIdentityCard.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUssueDateIdentityCard.Location = new System.Drawing.Point(5, 55);
             this.lblUssueDateIdentityCard.Name = "lblUssueDateIdentityCard";
             this.lblUssueDateIdentityCard.Size = new System.Drawing.Size(104, 21);
@@ -389,10 +389,10 @@
             // lblExpirationPassport
             // 
             this.lblExpirationPassport.AutoSize = true;
-            this.lblExpirationPassport.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpirationPassport.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExpirationPassport.Location = new System.Drawing.Point(5, 90);
             this.lblExpirationPassport.Name = "lblExpirationPassport";
-            this.lblExpirationPassport.Size = new System.Drawing.Size(111, 21);
+            this.lblExpirationPassport.Size = new System.Drawing.Size(109, 21);
             this.lblExpirationPassport.TabIndex = 6;
             this.lblExpirationPassport.Text = "Data ważności";
             // 
@@ -407,7 +407,7 @@
             // lblPassport
             // 
             this.lblPassport.AutoSize = true;
-            this.lblPassport.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassport.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassport.Location = new System.Drawing.Point(5, 20);
             this.lblPassport.Name = "lblPassport";
             this.lblPassport.Size = new System.Drawing.Size(92, 21);
@@ -417,7 +417,7 @@
             // lblUssueDatePassport
             // 
             this.lblUssueDatePassport.AutoSize = true;
-            this.lblUssueDatePassport.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUssueDatePassport.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUssueDatePassport.Location = new System.Drawing.Point(5, 55);
             this.lblUssueDatePassport.Name = "lblUssueDatePassport";
             this.lblUssueDatePassport.Size = new System.Drawing.Size(104, 21);
@@ -429,7 +429,7 @@
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Image = global::SystemHR.UserInterface.Properties.Resources.edit_icon;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(589, 428);
+            this.btnSave.Location = new System.Drawing.Point(590, 471);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(117, 40);
             this.btnSave.TabIndex = 15;
@@ -443,7 +443,7 @@
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Image = global::SystemHR.UserInterface.Properties.Resources.delete_icon;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(712, 428);
+            this.btnCancel.Location = new System.Drawing.Point(713, 471);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(117, 40);
             this.btnCancel.TabIndex = 16;

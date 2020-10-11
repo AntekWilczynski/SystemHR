@@ -58,10 +58,9 @@ namespace SystemHR.UserInterface.Forms
         }
 
         private void TcTabs_DrawItem(object sender, DrawItemEventArgs e)
-        
+        {
+            try
             {
-                try
-                {
                     var tabPage = this.tcTabs.TabPages[e.Index];
                     var tabRect = this.tcTabs.GetTabRect(e.Index);
                     var closeImage = new Bitmap($"{ResourcesHelper.ResourcesFilePath}\\{ResourcesHelper.close}");
@@ -70,15 +69,13 @@ namespace SystemHR.UserInterface.Forms
                         tabRect.Top + (tabRect.Height - closeImage.Height) / 2);
                     TextRenderer.DrawText(e.Graphics, tabPage.Text, tabPage.Font,
                         tabRect, tabPage.ForeColor, TextFormatFlags.Left);
-
-                }
-                catch (Exception ex) { throw new Exception(ex.Message); }
             }
+            catch (Exception ex) { throw new Exception(ex.Message);}
+        }
         
 
         private void TcTabs_MouseDown(object sender, MouseEventArgs e)
         {
-            // Process MouseDown event only till (tabControl.TabPages.Count - 1) excluding the last TabPage
             for (var i = 0; i < this.tcTabs.TabPages.Count; i++)
             {
                 var tabRect = this.tcTabs.GetTabRect(i);
