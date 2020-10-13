@@ -13,7 +13,7 @@ namespace SystemHR.DataAccessLayer.Models
         public string FirstName { get; set; }
         public int Code { get; set; }
         public GenderModel Gender { get; set; }
-        public DateTime? DataBirth { get; set; }
+        public DateTime? DateBirth { get; set; }
         public string PESEL {get;set;}
         public string PhoneNumber { get; set; }
         public string EmailAddress { get; set; }

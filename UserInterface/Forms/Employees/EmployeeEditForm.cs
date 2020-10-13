@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using SystemHR.DataAccessLayer.Models;
+using SystemHR.DataAccessLayer.Models.Dictionaries;
 using SystemHR.UserInterface.Forms.Base;
 
 namespace SystemHR.UserInterface.Forms.Employees
@@ -19,15 +17,105 @@ namespace SystemHR.UserInterface.Forms.Employees
         public EventHandler ReloadEmployees;
         #endregion
         #region Constructor
-        public EmployeeEditForm()
+        public EmployeeEditForm(int employeeId)
         {
             InitializeComponent();
+            employee = GetFakeEmployee(employeeId);
+            PrepareEmployeeData(employee);
             InitializeData();
-            ValidateControls();
+            ValidateControls(); 
         }
+
+        private void PrepareEmployeeData(EmployeeModel employee)
+        {
+            txtLastName.Text = employee.LastName;
+            txtFirstName.Text = employee.FirstName;
+            cbGender.Text = employee.Gender !=null? employee.Gender.Value :null;
+            dtpDateBirth.Value = employee.DateBirth.Value;
+            txtPESEL.Text = employee.PESEL;
+            txtPhoneNumber.Text = employee.PhoneNumber;
+            txtEmailAddress.Text = employee.EmailAddress;
+            txtIdentityCardNumber.Text = employee.IdentityCardNumber;
+            dtpIssueDateIdentityCard.Value = employee.IssueDateIdentytyCard.Value;
+            dtpExpirationIdentityCard.Value = employee.ExpirationDateIdentytyCard.Value;
+            txtPassportNumber.Text = employee.PassportNumber;
+            dtpIssueDatePassport.Value = employee.IssueDatePassport.Value;
+            dtpExpirationPassport.Value = employee.ExpirationDatePassport.Value;
+
+            lblEmployee.Text= $"{employee.FirstName}{employee.LastName}({employee.Code.ToString().PadLeft(4,'0')}) - {employee.Status.ToString()}"
+            
+        }
+
+
         #endregion
         #region Private Methods
+        private EmployeeModel GetFakeEmployee(int employeeId)
+        {
+            IList<EmployeeModel> fakeEmployeesModel = new List<EmployeeModel>()
+            {
+                new EmployeeModel()
+                {
+                    Id = 1,
+                    LastName = "Iksiński",
+                    FirstName = "Paweł",
+                    Code = 1,
+                    Gender = new GenderModel("mężczyzna"),
+                    DateBirth = new DateTime(1985,1,12),
+                    PESEL = "85061212345",
+                    PhoneNumber = "555 666 777",
+                    EmailAddress = "abc@gmail.com",
+                    IdentityCardNumber = "AWR 12347",
+                    IssueDateIdentytyCard = new DateTime(2000,2,12),
+                    ExpirationDateIdentytyCard = new DateTime(2050,11,11),
+                    PassportNumber = "RGB9875",
+                    IssueDatePassport = new DateTime(2020,10,3),
+                    ExpirationDatePassport = new DateTime(2021,12,13),
+                    Status = new StatusModel("Wprowadzony")
+                },
 
+                new EmployeeModel()
+                {
+                    Id = 2,
+                    LastName = "Romanov",
+                    FirstName = "Jurij",
+                    Code = 2,
+                    Gender = new GenderModel("mężczyzna"),
+                    DateBirth = new DateTime(1935,6,2),
+                    PESEL = "35061212345",
+                    PhoneNumber = "525 636 757",
+                    EmailAddress = "123abc@gmail.com",
+                    IdentityCardNumber = "AWH 23547",
+                    IssueDateIdentytyCard = new DateTime(2010,12,12),
+                    ExpirationDateIdentytyCard = new DateTime(2050,10,11),
+                    PassportNumber = "GPU346346",
+                    IssueDatePassport = new DateTime(2021,11,3),
+                    ExpirationDatePassport = new DateTime(2026,06,3),
+                    Status = new StatusModel("Wprowadzony")
+                },
+
+                new EmployeeModel()
+                {
+                    Id = 3,
+                    LastName = "CzingCzong",
+                    FirstName = "Zdzisława",
+                    Code = 3,
+                    Gender = new GenderModel("kobieta"),
+                    DateBirth = new DateTime(1995,5,15),
+                    PESEL = "95051516675",
+                    PhoneNumber = "555 777 444",
+                    EmailAddress = "def@gmail.com",
+                    IdentityCardNumber = "ABW 72344",
+                    IssueDateIdentytyCard = new DateTime(2000,2,12),
+                    ExpirationDateIdentytyCard = new DateTime(2050,9,12),
+                    PassportNumber = "KGB9875",
+                    IssueDatePassport = new DateTime(2020,5,13),
+                    ExpirationDatePassport = new DateTime(2021,11,3),
+                    Status = new StatusModel("Wprowadzony")
+                }
+            };
+            EmployeeModel fakeEmployeeModel = fakeEmployeesModel.Where(x => x.Id == employeeId).FirstOrDefault();
+            return fakeEmployeeModel;
+        }
         private bool ValidateForm()
         {
             StringBuilder sbErrorMessage = new StringBuilder();
@@ -161,14 +249,14 @@ namespace SystemHR.UserInterface.Forms.Employees
                     LastName = txtLastName.Text,
                     FirstName = txtFirstName.Text,
                     Gender = new GenderModel(cbGender.Text),
-                    DataBirth = dtpDateBirth.Value,
+                    DateBirth = dtpDateBirth.Value,
                     PESEL = txtPESEL.Text,
                     PhoneNumber = txtPhoneNumber.Text,
                     EmailAddress = txtEmailAddress.Text,
-                    IdentityCardNumber = txtIdentityCard.Text,
+                    IdentityCardNumber = txtIdentityCardNumber.Text,
                     IssueDateIdentytyCard = dtpIssueDateIdentityCard.Value,
                     ExpirationDateIdentytyCard = dtpExpirationIdentityCard.Value,
-                    PassportNumber = txtPassport.Text,
+                    PassportNumber = txtPassportNumber.Text,
                     IssueDatePassport = dtpExpirationPassport.Value,
                     ExpirationDatePassport = dtpExpirationPassport.Value,
                     Status = new StatusModel("Wprowadzony")

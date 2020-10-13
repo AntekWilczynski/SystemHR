@@ -164,7 +164,7 @@ namespace SystemHR.UserInterface.Forms.Employees
                     LastName = txtLastName.Text,
                     FirstName = txtFirstName.Text,
                     Gender = new GenderModel(cbGender.Text),
-                    DataBirth = dtpDateBirth.Value,
+                    DateBirth = dtpDateBirth.Value,
                     PESEL = txtPESEL.Text,
                     PhoneNumber = txtPhoneNumber.Text,
                     EmailAddress = txtEmailAddress.Text,

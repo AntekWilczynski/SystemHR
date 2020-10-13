@@ -37,16 +37,16 @@
             this.tpIdentyficationData = new System.Windows.Forms.TabPage();
             this.gbPassport = new System.Windows.Forms.GroupBox();
             this.dtpExpirationPassport = new System.Windows.Forms.DateTimePicker();
-            this.dtpUssueDatePassport = new System.Windows.Forms.DateTimePicker();
+            this.dtpIssueDatePassport = new System.Windows.Forms.DateTimePicker();
             this.lblExpirationPassport = new System.Windows.Forms.Label();
-            this.txtPassport = new System.Windows.Forms.TextBox();
+            this.txtPassportNumber = new System.Windows.Forms.TextBox();
             this.lblPassport = new System.Windows.Forms.Label();
             this.lblUssueDatePassport = new System.Windows.Forms.Label();
             this.gbIdentityCard = new System.Windows.Forms.GroupBox();
             this.dtpExpirationIdentityCard = new System.Windows.Forms.DateTimePicker();
             this.dtpIssueDateIdentityCard = new System.Windows.Forms.DateTimePicker();
             this.lblExpirationIdentityCard = new System.Windows.Forms.Label();
-            this.txtIdentityCard = new System.Windows.Forms.TextBox();
+            this.txtIdentityCardNumber = new System.Windows.Forms.TextBox();
             this.lblIdentityCard = new System.Windows.Forms.Label();
             this.lblUssueDateIdentityCard = new System.Windows.Forms.Label();
             this.gbContact = new System.Windows.Forms.GroupBox();
@@ -157,9 +157,9 @@
             // gbPassport
             // 
             this.gbPassport.Controls.Add(this.dtpExpirationPassport);
-            this.gbPassport.Controls.Add(this.dtpUssueDatePassport);
+            this.gbPassport.Controls.Add(this.dtpIssueDatePassport);
             this.gbPassport.Controls.Add(this.lblExpirationPassport);
-            this.gbPassport.Controls.Add(this.txtPassport);
+            this.gbPassport.Controls.Add(this.txtPassportNumber);
             this.gbPassport.Controls.Add(this.lblPassport);
             this.gbPassport.Controls.Add(this.lblUssueDatePassport);
             this.gbPassport.Font = new System.Drawing.Font("Segoe UI Emoji", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -182,13 +182,13 @@
             // 
             // dtpUssueDatePassport
             // 
-            this.dtpUssueDatePassport.CustomFormat = " ";
-            this.dtpUssueDatePassport.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpUssueDatePassport.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpUssueDatePassport.Location = new System.Drawing.Point(140, 55);
-            this.dtpUssueDatePassport.Name = "dtpUssueDatePassport";
-            this.dtpUssueDatePassport.Size = new System.Drawing.Size(240, 29);
-            this.dtpUssueDatePassport.TabIndex = 13;
+            this.dtpIssueDatePassport.CustomFormat = " ";
+            this.dtpIssueDatePassport.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpIssueDatePassport.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpIssueDatePassport.Location = new System.Drawing.Point(140, 55);
+            this.dtpIssueDatePassport.Name = "dtpUssueDatePassport";
+            this.dtpIssueDatePassport.Size = new System.Drawing.Size(240, 29);
+            this.dtpIssueDatePassport.TabIndex = 13;
             // 
             // lblExpirationPassport
             // 
@@ -202,11 +202,11 @@
             // 
             // txtPassport
             // 
-            this.txtPassport.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassport.Location = new System.Drawing.Point(140, 20);
-            this.txtPassport.Name = "txtPassport";
-            this.txtPassport.Size = new System.Drawing.Size(240, 29);
-            this.txtPassport.TabIndex = 5;
+            this.txtPassportNumber.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassportNumber.Location = new System.Drawing.Point(140, 20);
+            this.txtPassportNumber.Name = "txtPassport";
+            this.txtPassportNumber.Size = new System.Drawing.Size(240, 29);
+            this.txtPassportNumber.TabIndex = 5;
             // 
             // lblPassport
             // 
@@ -233,7 +233,7 @@
             this.gbIdentityCard.Controls.Add(this.dtpExpirationIdentityCard);
             this.gbIdentityCard.Controls.Add(this.dtpIssueDateIdentityCard);
             this.gbIdentityCard.Controls.Add(this.lblExpirationIdentityCard);
-            this.gbIdentityCard.Controls.Add(this.txtIdentityCard);
+            this.gbIdentityCard.Controls.Add(this.txtIdentityCardNumber);
             this.gbIdentityCard.Controls.Add(this.lblIdentityCard);
             this.gbIdentityCard.Controls.Add(this.lblUssueDateIdentityCard);
             this.gbIdentityCard.Font = new System.Drawing.Font("Segoe UI Emoji", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -276,11 +276,11 @@
             // 
             // txtIdentityCard
             // 
-            this.txtIdentityCard.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdentityCard.Location = new System.Drawing.Point(140, 20);
-            this.txtIdentityCard.Name = "txtIdentityCard";
-            this.txtIdentityCard.Size = new System.Drawing.Size(240, 29);
-            this.txtIdentityCard.TabIndex = 5;
+            this.txtIdentityCardNumber.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdentityCardNumber.Location = new System.Drawing.Point(140, 20);
+            this.txtIdentityCardNumber.Name = "txtIdentityCard";
+            this.txtIdentityCardNumber.Size = new System.Drawing.Size(240, 29);
+            this.txtIdentityCardNumber.TabIndex = 5;
             // 
             // lblIdentityCard
             // 
@@ -538,16 +538,16 @@
         private System.Windows.Forms.TabPage tpEmploymentHistory;
         private System.Windows.Forms.GroupBox gbPassport;
         private System.Windows.Forms.DateTimePicker dtpExpirationPassport;
-        private System.Windows.Forms.DateTimePicker dtpUssueDatePassport;
+        private System.Windows.Forms.DateTimePicker dtpIssueDatePassport;
         private System.Windows.Forms.Label lblExpirationPassport;
-        private System.Windows.Forms.TextBox txtPassport;
+        private System.Windows.Forms.TextBox txtPassportNumber;
         private System.Windows.Forms.Label lblPassport;
         private System.Windows.Forms.Label lblUssueDatePassport;
         private System.Windows.Forms.GroupBox gbIdentityCard;
         private System.Windows.Forms.DateTimePicker dtpExpirationIdentityCard;
         private System.Windows.Forms.DateTimePicker dtpIssueDateIdentityCard;
         private System.Windows.Forms.Label lblExpirationIdentityCard;
-        private System.Windows.Forms.TextBox txtIdentityCard;
+        private System.Windows.Forms.TextBox txtIdentityCardNumber;
         private System.Windows.Forms.Label lblIdentityCard;
         private System.Windows.Forms.Label lblUssueDateIdentityCard;
         private System.Windows.Forms.GroupBox gbContact;
