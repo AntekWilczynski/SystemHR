@@ -244,25 +244,19 @@ namespace SystemHR.UserInterface.Forms.Employees
         {
             if (ValidateForm())
             {
-                EmployeeModel employee = new EmployeeModel()
-                {
-                    LastName = txtLastName.Text,
-                    FirstName = txtFirstName.Text,
-                    Gender = new GenderModel(cbGender.Text),
-                    DateBirth = dtpDateBirth.Value,
-                    PESEL = txtPESEL.Text,
-                    PhoneNumber = txtPhoneNumber.Text,
-                    EmailAddress = txtEmailAddress.Text,
-                    IdentityCardNumber = txtIdentityCardNumber.Text,
-                    IssueDateIdentytyCard = dtpIssueDateIdentityCard.Value,
-                    ExpirationDateIdentytyCard = dtpExpirationIdentityCard.Value,
-                    PassportNumber = txtPassportNumber.Text,
-                    IssueDatePassport = dtpExpirationPassport.Value,
-                    ExpirationDatePassport = dtpExpirationPassport.Value,
-                    Status = new StatusModel("Wprowadzony")
-                };
-                employee.Id = 4;
-                employee.Code = 4;
+                employee.LastName = txtLastName.Text;
+                employee.FirstName = txtFirstName.Text;
+                employee.Gender = new GenderModel(cbGender.Text);
+                employee.DateBirth = dtpDateBirth.Value;
+                employee.PESEL = txtPESEL.Text;
+                employee.PhoneNumber = txtPhoneNumber.Text;
+                employee.EmailAddress = txtEmailAddress.Text;
+                employee.IdentityCardNumber = txtIdentityCardNumber.Text;
+                employee.IssueDateIdentytyCard = dtpIssueDateIdentityCard.Value;
+                employee.ExpirationDateIdentytyCard = dtpExpirationIdentityCard.Value;
+                employee.PassportNumber = txtPassportNumber.Text;
+                employee.IssueDatePassport = dtpExpirationPassport.Value;
+                employee.ExpirationDatePassport = dtpExpirationPassport.Value;
                 ReloadEmployees?.Invoke(btnSave, new EmployeeEventArgs(employee));
                 Close();
             }

@@ -95,6 +95,7 @@
             this.btnCancel.Text = "Anuluj";
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.TextChanged += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -108,6 +109,7 @@
             this.btnSave.Text = "Zapisz";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.TextChanged += new System.EventHandler(this.btnSave_Click);
             // 
             // pbEmployee
             // 
@@ -179,16 +181,18 @@
             this.dtpExpirationPassport.Name = "dtpExpirationPassport";
             this.dtpExpirationPassport.Size = new System.Drawing.Size(240, 29);
             this.dtpExpirationPassport.TabIndex = 12;
+            this.dtpExpirationPassport.ValueChanged += new System.EventHandler(this.dtp_ValueChanged);
             // 
-            // dtpUssueDatePassport
+            // dtpIssueDatePassport
             // 
             this.dtpIssueDatePassport.CustomFormat = " ";
             this.dtpIssueDatePassport.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpIssueDatePassport.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpIssueDatePassport.Location = new System.Drawing.Point(140, 55);
-            this.dtpIssueDatePassport.Name = "dtpUssueDatePassport";
+            this.dtpIssueDatePassport.Name = "dtpIssueDatePassport";
             this.dtpIssueDatePassport.Size = new System.Drawing.Size(240, 29);
             this.dtpIssueDatePassport.TabIndex = 13;
+            this.dtpIssueDatePassport.ValueChanged += new System.EventHandler(this.dtp_ValueChanged);
             // 
             // lblExpirationPassport
             // 
@@ -200,11 +204,11 @@
             this.lblExpirationPassport.TabIndex = 6;
             this.lblExpirationPassport.Text = "Data ważności";
             // 
-            // txtPassport
+            // txtPassportNumber
             // 
             this.txtPassportNumber.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassportNumber.Location = new System.Drawing.Point(140, 20);
-            this.txtPassportNumber.Name = "txtPassport";
+            this.txtPassportNumber.Name = "txtPassportNumber";
             this.txtPassportNumber.Size = new System.Drawing.Size(240, 29);
             this.txtPassportNumber.TabIndex = 5;
             // 
@@ -253,6 +257,7 @@
             this.dtpExpirationIdentityCard.Name = "dtpExpirationIdentityCard";
             this.dtpExpirationIdentityCard.Size = new System.Drawing.Size(240, 29);
             this.dtpExpirationIdentityCard.TabIndex = 12;
+            this.dtpExpirationIdentityCard.ValueChanged += new System.EventHandler(this.dtp_ValueChanged);
             // 
             // dtpIssueDateIdentityCard
             // 
@@ -263,6 +268,7 @@
             this.dtpIssueDateIdentityCard.Name = "dtpIssueDateIdentityCard";
             this.dtpIssueDateIdentityCard.Size = new System.Drawing.Size(240, 29);
             this.dtpIssueDateIdentityCard.TabIndex = 13;
+            this.dtpIssueDateIdentityCard.ValueChanged += new System.EventHandler(this.dtp_ValueChanged);
             // 
             // lblExpirationIdentityCard
             // 
@@ -274,11 +280,11 @@
             this.lblExpirationIdentityCard.TabIndex = 6;
             this.lblExpirationIdentityCard.Text = "Data ważności";
             // 
-            // txtIdentityCard
+            // txtIdentityCardNumber
             // 
             this.txtIdentityCardNumber.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdentityCardNumber.Location = new System.Drawing.Point(140, 20);
-            this.txtIdentityCardNumber.Name = "txtIdentityCard";
+            this.txtIdentityCardNumber.Name = "txtIdentityCardNumber";
             this.txtIdentityCardNumber.Size = new System.Drawing.Size(240, 29);
             this.txtIdentityCardNumber.TabIndex = 5;
             // 
@@ -378,6 +384,7 @@
             this.txtPESEL.Name = "txtPESEL";
             this.txtPESEL.Size = new System.Drawing.Size(240, 29);
             this.txtPESEL.TabIndex = 11;
+            this.txtPESEL.TextChanged += new System.EventHandler(this.txtPESEL_Validated);
             // 
             // lblPesel
             // 
@@ -398,6 +405,7 @@
             this.dtpDateBirth.Name = "dtpDateBirth";
             this.dtpDateBirth.Size = new System.Drawing.Size(240, 29);
             this.dtpDateBirth.TabIndex = 9;
+            this.dtpDateBirth.ValueChanged += new System.EventHandler(this.dtp_ValueChanged);
             // 
             // lblBirthDay
             // 
@@ -437,6 +445,7 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(240, 29);
             this.txtFirstName.TabIndex = 5;
+            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
             // 
             // txtLastName
             // 
@@ -445,6 +454,7 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(240, 29);
             this.txtLastName.TabIndex = 4;
+            this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
             // 
             // lblFirstName
             // 
