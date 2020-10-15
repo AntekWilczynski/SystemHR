@@ -152,8 +152,22 @@ namespace SystemHR.UserInterface.Forms.Employees
 
         private void btnModify_Click(object sender, EventArgs e)
         {
-            EmployeeEditForm frm = new EmployeeEditForm();
-                frm.ShowDialog();
+            int employeeId = Convert.ToInt32(dgvEmployees.CurrentRow.Cells["colId"].Value);
+            int selectedRowIndex = dgvEmployees.CurrentRow.Index;
+
+
+            EmployeeEditForm frm = new EmployeeEditForm(employeeId);
+            frm.ReloadEmployees += (s, ea) =>
+            {
+                EmployeeEventArgs eventArgs = ea as EmployeeEventArgs;
+                if (eventArgs != null)
+                {
+                    EmployeeViewModel employee
+                    = MappingHelper.MapEmployeeModelToEmployeeViewModel(eventArgs.Employee);
+                    bsEmployees[selectedRowIndex] = employee;
+                }
+            };
+            frm.ShowDialog();
         }
     }
 }

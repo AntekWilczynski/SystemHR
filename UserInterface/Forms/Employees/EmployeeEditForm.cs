@@ -6,7 +6,9 @@ using System.Text;
 using System.Windows.Forms;
 using SystemHR.DataAccessLayer.Models;
 using SystemHR.DataAccessLayer.Models.Dictionaries;
+using SystemHR.UserInterface.Classes;
 using SystemHR.UserInterface.Forms.Base;
+using SystemHR.UserInterface.Helpers;
 
 namespace SystemHR.UserInterface.Forms.Employees
 {
@@ -42,7 +44,7 @@ namespace SystemHR.UserInterface.Forms.Employees
             dtpIssueDatePassport.Value = employee.IssueDatePassport.Value;
             dtpExpirationPassport.Value = employee.ExpirationDatePassport.Value;
 
-            lblEmployee.Text= $"{employee.FirstName}{employee.LastName}({employee.Code.ToString().PadLeft(4,'0')}) - {employee.Status.ToString()}"
+            lblEmployee.Text = $"{employee.FirstName}{employee.LastName}({employee.Code.ToString().PadLeft(4, '0')}) - {employee.Status.ToString()}";
             
         }
 
@@ -204,7 +206,7 @@ namespace SystemHR.UserInterface.Forms.Employees
         private void dtp_ValueChanged(object sender, EventArgs e)
         {
             DateTimePicker dtp = sender as DateTimePicker;
-            dtp.DatePickerValueChanged();
+            //dtp.DatePickerValueChanged();
         }
 
         private void txtLastName_TextChanged(object sender, EventArgs e)
