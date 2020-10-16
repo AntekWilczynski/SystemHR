@@ -60,13 +60,13 @@
             this.dtpDateBirth = new System.Windows.Forms.DateTimePicker();
             this.lblBirthDay = new System.Windows.Forms.Label();
             this.cbGender = new System.Windows.Forms.ComboBox();
+            this.bsGender = new System.Windows.Forms.BindingSource(this.components);
             this.lblGender = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.tpEmploymentHistory = new System.Windows.Forms.TabPage();
-            this.bsGender = new System.Windows.Forms.BindingSource(this.components);
             this.epLastName = new System.Windows.Forms.ErrorProvider(this.components);
             this.epFirstName = new System.Windows.Forms.ErrorProvider(this.components);
             this.epPESEL = new System.Windows.Forms.ErrorProvider(this.components);
@@ -176,7 +176,7 @@
             // 
             this.dtpExpirationPassport.CustomFormat = " ";
             this.dtpExpirationPassport.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpExpirationPassport.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpExpirationPassport.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpExpirationPassport.Location = new System.Drawing.Point(140, 90);
             this.dtpExpirationPassport.Name = "dtpExpirationPassport";
             this.dtpExpirationPassport.Size = new System.Drawing.Size(240, 29);
@@ -187,7 +187,7 @@
             // 
             this.dtpIssueDatePassport.CustomFormat = " ";
             this.dtpIssueDatePassport.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpIssueDatePassport.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpIssueDatePassport.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpIssueDatePassport.Location = new System.Drawing.Point(140, 55);
             this.dtpIssueDatePassport.Name = "dtpIssueDatePassport";
             this.dtpIssueDatePassport.Size = new System.Drawing.Size(240, 29);
@@ -252,7 +252,7 @@
             // 
             this.dtpExpirationIdentityCard.CustomFormat = " ";
             this.dtpExpirationIdentityCard.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpExpirationIdentityCard.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpExpirationIdentityCard.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpExpirationIdentityCard.Location = new System.Drawing.Point(140, 90);
             this.dtpExpirationIdentityCard.Name = "dtpExpirationIdentityCard";
             this.dtpExpirationIdentityCard.Size = new System.Drawing.Size(240, 29);
@@ -263,7 +263,7 @@
             // 
             this.dtpIssueDateIdentityCard.CustomFormat = " ";
             this.dtpIssueDateIdentityCard.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpIssueDateIdentityCard.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpIssueDateIdentityCard.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpIssueDateIdentityCard.Location = new System.Drawing.Point(140, 55);
             this.dtpIssueDateIdentityCard.Name = "dtpIssueDateIdentityCard";
             this.dtpIssueDateIdentityCard.Size = new System.Drawing.Size(240, 29);
@@ -400,7 +400,7 @@
             // 
             this.dtpDateBirth.CustomFormat = " ";
             this.dtpDateBirth.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDateBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDateBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDateBirth.Location = new System.Drawing.Point(140, 125);
             this.dtpDateBirth.Name = "dtpDateBirth";
             this.dtpDateBirth.Size = new System.Drawing.Size(240, 29);
@@ -419,6 +419,7 @@
             // 
             // cbGender
             // 
+            this.cbGender.DataSource = this.bsGender;
             this.cbGender.DisplayMember = "Value";
             this.cbGender.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbGender.FormattingEnabled = true;
@@ -427,6 +428,10 @@
             this.cbGender.Size = new System.Drawing.Size(240, 29);
             this.cbGender.TabIndex = 7;
             this.cbGender.ValueMember = "Id";
+            // 
+            // bsGender
+            // 
+            this.bsGender.DataSource = typeof(SystemHR.DataAccessLayer.Models.Dictionaries.GenderModel);
             // 
             // lblGender
             // 
@@ -485,10 +490,6 @@
             this.tpEmploymentHistory.TabIndex = 1;
             this.tpEmploymentHistory.Text = "Historia zatrudnienia";
             this.tpEmploymentHistory.UseVisualStyleBackColor = true;
-            // 
-            // bsGender
-            // 
-            this.bsGender.DataSource = typeof(SystemHR.DataAccessLayer.Models.Dictionaries.GenderModel);
             // 
             // epLastName
             // 

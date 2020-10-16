@@ -18,8 +18,8 @@ namespace SystemHR.DataAccessLayer.Models
         public string PhoneNumber { get; set; }
         public string EmailAddress { get; set; }
         public string IdentityCardNumber { get; set; }
-        public DateTime? IssueDateIdentytyCard { get; set; }
-        public DateTime? ExpirationDateIdentytyCard { get; set; }
+        public DateTime? IssueDateIdentityCard { get; set; }
+        public DateTime? ExpirationDateIdentityCard { get; set; }
         public string PassportNumber { get; set; }
         public DateTime? IssueDatePassport { get; set; }
         public DateTime? ExpirationDatePassport { get; set; }
