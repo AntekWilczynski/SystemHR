@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using SystemHR.DataAccessLayer.Models;
 using SystemHR.DataAccessLayer.Models.Dictionaries;
 using SystemHR.UserInterface.Classes;
+using SystemHR.UserInterface.Extensions;
 using SystemHR.UserInterface.Forms.Base;
 using SystemHR.UserInterface.Helpers;
 
@@ -33,23 +34,20 @@ namespace SystemHR.UserInterface.Forms.Employees
             txtLastName.Text = employee.LastName;
             txtFirstName.Text = employee.FirstName;
             cbGender.Text = employee.Gender !=null? employee.Gender.Value :null;
-            dtpDateBirth.Value = employee.DateBirth.Value;
+            dtpDateBirth.SetDateTimePickerValue(employee.DateBirth);
             txtPESEL.Text = employee.PESEL;
             txtPhoneNumber.Text = employee.PhoneNumber;
             txtEmailAddress.Text = employee.EmailAddress;
             txtIdentityCardNumber.Text = employee.IdentityCardNumber;
-            dtpIssueDateIdentityCard.Value = employee.IssueDateIdentityCard.Value;
-            dtpExpirationIdentityCard.Value = employee.ExpirationDateIdentityCard.Value;
+            dtpIssueDateIdentityCard.SetDateTimePickerValue(employee.IssueDateIdentityCard);
+            dtpExpirationIdentityCard.SetDateTimePickerValue(employee.ExpirationDateIdentityCard);
             txtPassportNumber.Text = employee.PassportNumber;
-            dtpIssueDatePassport.Value = employee.IssueDatePassport.Value;
-            dtpExpirationPassport.Value = employee.ExpirationDatePassport.Value;
-
+            dtpIssueDatePassport.SetDateTimePickerValue(employee.IssueDatePassport);
+            dtpExpirationPassport.SetDateTimePickerValue(employee.ExpirationDatePassport);
             lblEmployee.Text = $"{employee.FirstName}{employee.LastName}({employee.Code.ToString().PadLeft(4, '0')}) - {employee.Status.ToString()}";
-            
         }
-
-
         #endregion
+
         #region Private Methods
         private EmployeeModel GetFakeEmployee(int employeeId)
         {
