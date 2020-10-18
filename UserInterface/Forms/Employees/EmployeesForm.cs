@@ -193,8 +193,6 @@ namespace SystemHR.UserInterface.Forms.Employees
             _instance = null;
         }
 
-        #endregion
-
         private void btnModify_Click(object sender, EventArgs e)
         {
             int employeeId = Convert.ToInt32(dgvEmployees.CurrentRow.Cells["colId"].Value);
@@ -213,6 +211,29 @@ namespace SystemHR.UserInterface.Forms.Employees
                 }
             };
             frm.ShowDialog();
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            int employeeId = Convert.ToInt32(dgvEmployees.CurrentRow.Cells["colId"].Value);
+            int selectedRowIndex = dgvEmployees.CurrentRow.Index;
+
+            //Remove Employee(employee);
+
+            EmployeeViewModel employee = fakeEmployees.Where(x => x.Id == employeeId).FirstOrDefault();
+            if (employee != null)
+            {
+                bsEmployees.Remove(employee);
+                if (dgvEmployees.Rows.Count > 1)
+                {
+
+                    dgvEmployees.ClearSelection();
+                    dgvEmployees.Rows[dgvEmployees.Rows.Count - 1].Selected = true;
+                }
+            }
+            #endregion
+
+
         }
     }
 }
