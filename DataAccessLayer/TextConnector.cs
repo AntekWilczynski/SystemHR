@@ -8,9 +8,9 @@ using SystemHR.DataAccessLayer.Models.Dictionaries;
 
 namespace SystemHR.DataAccessLayer
 {
-    public class SqlConnector
+    public class TextConnector
     {
-        IList<EmployeeModel> fakeSqlEmployeesModel = new List<EmployeeModel>()
+        IList<EmployeeModel> fakeTextEmployeesModel = new List<EmployeeModel>()
         {
             new EmployeeModel()
                 {
@@ -115,23 +115,15 @@ namespace SystemHR.DataAccessLayer
                     Status = new StatusModel("Wprowadzony")
                 }
         };
-        public IEnumerable<EmployeeModel>GetEmployees()
+        public IEnumerable<EmployeeModel> GetEmployees()
         {
-            return fakeSqlEmployeesModel; 
+            return fakeSqlEmployeesModel;
         }
         public EmployeeModel GetEmployee(int id)
         {
             return fakeSqlEmployeesModel.Single(x => x.Id == id);
-        }
-        public EmployeeModel CreateEmployee(EmployeeModel model)
-        {
-            return model;
-        }
-        public EmployeeModel ModifyEmployee(EmployeeModel model)
-        {
-            return model;
-        }
-        public void RemoveEmployee(int id )
-        { }
+        } 
+
+
     }
 }
